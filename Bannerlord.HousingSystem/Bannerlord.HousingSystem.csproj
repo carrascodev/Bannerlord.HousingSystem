@@ -55,5 +55,7 @@
 
   <ItemGroup>
     <Folder Include="Patches" />
+    <Folder Include="_Module\assets" />
+    <Folder Include="_Module\GUI\Prefabs" />
   </ItemGroup>
 </Project>
