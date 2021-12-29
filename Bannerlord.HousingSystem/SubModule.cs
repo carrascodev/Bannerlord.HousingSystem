@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
 using TaleWorlds.Core;
 using TaleWorlds.Engine.GauntletUI;
 using TaleWorlds.Engine.Screens;
