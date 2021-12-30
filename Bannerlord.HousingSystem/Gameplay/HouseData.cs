@@ -12,4 +12,7 @@ public class HouseData
     public double PricePaid { get; set; }
     [SaveableProperty(3)]
     public ItemRoster ItemRoster { get; set; }
+    [SaveableProperty(4)]
+
+    public int StorageCapacity { get; set; }
 }

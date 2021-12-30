@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Library;
+using TaleWorlds.MountAndBlade;
 
 namespace Bannerlord.HousingSystem;
 
@@ -68,7 +69,18 @@ public class HousingManager : GenericSingleton<HousingManager>
     {
         if (CanBuyHouse(settlement, config))
         {
-            
+            var pricing = GetHousePriceForSettlement(settlement,config);
+            HouseData data = new HouseData()
+            {
+                ConfigId = config.Id,
+                ItemRoster = new ItemRoster(),
+                PricePaid = pricing,
+                StorageCapacity = config.StorageCapacity
+                
+            };
+            HouseInventory[settlement].Datas ??= new Dictionary<HouseTier, HouseData>();
+            HouseInventory[settlement].Datas.Add(config.Tier,data);
+            Hero.MainHero.Gold -= pricing;
         }
     }
 

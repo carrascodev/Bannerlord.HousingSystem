@@ -4,14 +4,18 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Overlay;
 using TaleWorlds.Core;
+using TaleWorlds.Localization;
+using TaleWorlds.ObjectSystem;
 
 namespace Bannerlord.HousingSystem;
 
 public class HouseSystemBehaviour : CampaignBehaviorBase
 {
+    private readonly HousingManager _housingManager = HousingManager.Instance;
+
     public override void RegisterEvents()
     {
-        HousingManager.Instance.HouseInventory = new Dictionary<Settlement, HouseInventory>();
+        _housingManager.HouseInventory = new Dictionary<Settlement, HouseInventory>();
         CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
     }
 
@@ -25,15 +29,24 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         starter.AddGameMenuOption("town","town_housing", "{=!}Houses", CanOpenHousingMenu, 
             (args) => OnOpenHousingMenuConsequence(args, starter));
         
-        var configs = HousingManager.Instance.Config;
+        var configs = _housingManager.Config;
         foreach (var config in configs)
         {
-            starter.AddGameMenuOption("housing_menu", config.Id, $"{{=!}}{{OPTION_{config.Id}}}",
+            starter.AddGameMenuOption("housing_menu", config.Id, $"{{=!}}{{HOUSE_OPTION_{config.Id}}}",
                 args => CanBuyOrOpenHouseCondition(args, config), 
                 args => OnBuyOrOpenHouseConsequence(args, config));
             starter.AddGameMenu(config.Id, "{=!}"+config.Name+" Menu", _ => {});
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", args => true, OnHouseEnterConsequence);
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}Enter in house", args => true, OnHouseRentConsequence);
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Enter in house", args => true, OnHouseOpenStorageConsequence);
         }
-        starter.AddGameMenu("housing_menu","{=!}House Menu", _ => {});
+        starter.AddGameMenu("housing_menu","{=!}House Menu", _ =>
+        {
+            foreach (var config in configs)
+            {
+                SetupOptionText(config);
+            }
+        });
     }
 
     private bool CanOpenHousingMenu(MenuCallbackArgs args)
@@ -48,23 +61,36 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private bool CanBuyOrOpenHouseCondition(MenuCallbackArgs args, HouseConfig config)
     {
-        if (HousingManager.Instance.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
+        if (_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
         {
             return true; // Can Open/Enter
         }
 
-        return HousingManager.Instance.CanBuyHouse(Settlement.CurrentSettlement, config);
+        return _housingManager.CanBuyHouse(Settlement.CurrentSettlement, config);
+    }
+
+    private void SetupOptionText(HouseConfig config)
+    {
+        if (_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
+        {
+            MBTextManager.SetTextVariable("HOUSE_OPTION_"+config.Id, $"Manager your {config.Name}");
+        }
+        else
+        {
+            MBTextManager.SetTextVariable("HOUSE_OPTION_"+config.Id, 
+                $"Buy for {_housingManager.GetHousePriceForSettlement(Settlement.CurrentSettlement, config)}");
+        }
     }
 
     private void OnBuyOrOpenHouseConsequence(MenuCallbackArgs args, HouseConfig config)
     {
-        if (HousingManager.Instance.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
+        if (_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
         {
             GameMenu.SwitchToMenu(config.Id);
             return;
         }
 
-        HousingManager.Instance.BuyHouse(Settlement.CurrentSettlement, config);
+        _housingManager.BuyHouse(Settlement.CurrentSettlement, config);
     }
 
     public bool CanAccess()
@@ -74,6 +100,30 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     public override void SyncData(IDataStore dataStore)
     {
-        dataStore.SyncData("_house_inventory", ref HousingManager.Instance.HouseInventory);
+        dataStore.SyncData("_house_inventory", ref _housingManager.HouseInventory);
+    }
+    
+    private void OnHouseEnterConsequence(MenuCallbackArgs args)
+    {
+        
+    }
+    
+    private void OnHouseRentConsequence(MenuCallbackArgs args)
+    {
+        //TODO:
+    }
+    
+    private void OnHouseOpenStorageConsequence(MenuCallbackArgs args, HouseConfig config)
+    {
+        Settlement settlement = MBObjectManager.Instance.GetObject<Settlement>(config.SceneName);
+        //LocationEncounter locationEncounter = new HouseEncounter(settlement);
+        //Campaign.Current.HandleSettlementEncounter(MobileParty.MainParty, settlement);
+    }
+}
+
+public class HouseEncounter : TownEncounter
+{
+    protected HouseEncounter(Settlement settlement) : base(settlement)
+    {
     }
 }
