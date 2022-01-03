@@ -44,10 +44,24 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
                 args => CanBuyOrOpenHouseCondition(args, config),
                 args => OnBuyOrOpenHouseConsequence(args, config));
             starter.AddGameMenu(config.Id, "{=!}" + config.Name + " Menu", _ => { }, GameOverlays.MenuOverlayType.SettlementWithBoth);
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", args => true, args => OnHouseEnterConsequence(args, config));
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}Enter in house", args => true, OnHouseRentConsequence);
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Enter in house", args => true, args => OnHouseOpenStorageConsequence(args, config));
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", 
+                args => true, 
+                args => OnHouseEnterConsequence(args, config));
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}Rent", 
+                args => true, 
+                OnHouseRentConsequence);
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Open Storage", 
+                args => true, 
+                args => OnHouseOpenStorageConsequence(args, config));
+            starter.AddGameMenuOption(config.Id, config.Id+"_go_back", "Go Back", _ => true, args =>
+            {
+                GameMenu.SwitchToMenu("housing_menu");
+            });
         }
+        starter.AddGameMenuOption("housing_menu", "go_back", "Go Back", _ => true, args =>
+        {
+            GameMenu.SwitchToMenu("town");
+        });
     }
 
     private bool CanOpenHousingMenu(MenuCallbackArgs args)
@@ -79,7 +93,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         else
         {
             MBTextManager.SetTextVariable("HOUSE_OPTION_" + config.Id,
-                $"Buy for {_housingManager.GetHousePriceForSettlement(Settlement.CurrentSettlement, config)}");
+                $"Buy {config.Name} for {_housingManager.GetHousePriceForSettlement(Settlement.CurrentSettlement, config)}");
         }
     }
 

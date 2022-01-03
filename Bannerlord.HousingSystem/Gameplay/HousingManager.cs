@@ -55,7 +55,7 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     public bool CanBuyHouse(Settlement settlement,HouseConfig config)
     {
-        if (HouseInventory[settlement].Datas != null)
+        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas != null)
         {
             var pricing = GetHousePriceForSettlement(settlement,config);
             if (!IsHouseBought(settlement,config.Tier) && Hero.MainHero.Gold >= pricing)
@@ -78,6 +78,11 @@ public class HousingManager : GenericSingleton<HousingManager>
                 StorageCapacity = config.StorageCapacity
                 
             };
+            if (!HouseInventory.ContainsKey(settlement))
+            {
+                HouseInventory.Add(settlement,new HouseInventory() { Datas = new Dictionary<HouseTier, HouseData>()});
+            }
+            
             HouseInventory[settlement].Datas ??= new Dictionary<HouseTier, HouseData>();
             HouseInventory[settlement].Datas.Add(config.Tier,data);
             Hero.MainHero.Gold -= pricing;
@@ -86,7 +91,7 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     public bool IsHouseBought(Settlement settlement, HouseTier tier)
     {
-        if (HouseInventory[settlement].Datas == null)
+        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null)
         {
             return false;
         }
