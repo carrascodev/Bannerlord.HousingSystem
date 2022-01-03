@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Overlay;
+using TaleWorlds.Engine;
 using TaleWorlds.Localization;
+using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
 
 namespace Bannerlord.HousingSystem;
@@ -119,12 +122,8 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private void OnHouseEnterConsequence(MenuCallbackArgs args, HouseConfig config)
     {
-        var locationEncounter = new HouseEncounter(Settlement.CurrentSettlement);
-        Campaign.Current.GameMenuManager.NextLocation = LocationComplex.Current.GetLocationWithId(config.Id);
-        Campaign.Current.GameMenuManager.PreviousLocation = LocationComplex.Current.GetLocationWithId("center");
-        locationEncounter.CreateAndOpenMissionController(Campaign.Current.GameMenuManager.NextLocation);
-        Campaign.Current.GameMenuManager.NextLocation = null;
-        Campaign.Current.GameMenuManager.PreviousLocation = null;
+        var locationEncounter = new HouseEncounter(Settlement.CurrentSettlement,config.Id, config.SceneName);
+        locationEncounter.CreateAndOpenMissionController(null);
     }
 
     private void OnHouseRentConsequence(MenuCallbackArgs args)

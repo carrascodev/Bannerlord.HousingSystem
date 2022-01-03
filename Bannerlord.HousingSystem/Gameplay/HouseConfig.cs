@@ -9,6 +9,7 @@ public class HouseConfig
 {
     [JsonProperty]
     public string Id { get; set; }
+    
     [JsonProperty]
     public string Name { get; set; }
     [JsonProperty]

@@ -1,12 +1,21 @@
-81
+92
+mesh animation_stand_arrow_blue
+mesh animation_stand_arrow_green
 mesh editor_plane_low
+mesh empire_statue_bust_place_a
+prefab SpawnPointDebugView
+prefab _barrier_passage_center
 prefab _to_carry_bed_convolute_g
+prefab animation_point
+prefab arabian_platform_wooden_c
 prefab armor_merchant_clothes_d
 prefab armor_merchant_shoe_c
 prefab bd_basket_aserai_a
 prefab bd_basket_aserai_c
+prefab bd_chair_b_01
 prefab bd_chair_c_left
 prefab bd_chair_c_left_unsittable
+prefab bd_chair_c_right
 prefab bd_chest_sturgia_d
 prefab bd_cloth_wall_c
 prefab bd_flask_sturgia_b
@@ -43,19 +52,19 @@ prefab empire_house_shrine_a
 prefab empire_house_tower_e2
 prefab empire_road_floor_a_small
 prefab empire_road_plaza_a
-prefab empire_statue_bust_place_a
 prefab empire_street_fountain_e
-prefab empire_street_pottery_12
 prefab flame_loop
+prefab floor_dirt_b
+prefab floor_dirt_c
 prefab foods_Maggots
 prefab kitchen_bowl_b
 prefab kitchen_bowl_b_two
 prefab kitchen_mug_b
-prefab looking_at_beggar
 prefab mat_carpet_i
-prefab particles
-prefab pot_archery_destroyed
+prefab passage_use_point
 prefab pot_break_a
+prefab pot_break_b
+prefab pot_break_c
 prefab pottery_c6
 prefab reverb_gatehouse
 prefab roman_house_big_a
@@ -65,9 +74,11 @@ prefab scene: empire_house_a_interior
 prefab scene: empire_house_b_interior
 prefab shop_sign__g
 prefab shop_sign_merchantpottery
-prefab sp_beggar
-prefab sp_common
-prefab sp_npc_beggar_sitting
+prefab sp_mercenary
+prefab sp_player
+prefab sp_tavern_wench
+prefab sp_tavernkeeper
+prefab sp_thug
 prefab torch_candle_c_fire
 prefab torch_wall_d
 texture cg_50c_5b
