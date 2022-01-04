@@ -19,6 +19,12 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
     {
         _housingManager.HouseInventory = new Dictionary<Settlement, HouseInventory>();
         CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
+        CampaignEvents.WeeklyTickEvent.AddNonSerializedListener((object) this, OnWeeklyTick);
+    }
+
+    private void OnWeeklyTick()
+    {
+        //TODO: 
     }
 
     private void OnSessionLaunched(CampaignGameStarter starter)
@@ -52,7 +58,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
                 args => OnHouseEnterConsequence(args, config));
             starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}Rent", 
                 args => true, 
-                OnHouseRentConsequence);
+                args => OnHouseRentConsequence(args, config));
             starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Open Storage", 
                 args => true, 
                 args => OnHouseOpenStorageConsequence(args, config));
@@ -126,13 +132,13 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         locationEncounter.CreateAndOpenMissionController(null);
     }
 
-    private void OnHouseRentConsequence(MenuCallbackArgs args)
+    private void OnHouseRentConsequence(MenuCallbackArgs args, HouseConfig config)
     {
-        //TODO:
+        //TODO: 
     }
 
     private void OnHouseOpenStorageConsequence(MenuCallbackArgs args, HouseConfig config)
     {
-        //TODO:
+        HousingManager.Instance.OpenHouseRoster(Settlement.CurrentSettlement, config.Tier);
     }
 }

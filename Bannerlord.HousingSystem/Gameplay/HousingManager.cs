@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
@@ -17,8 +18,9 @@ public class HousingManager : GenericSingleton<HousingManager>
     public HousingSettings Settings { get; private set; }
     
     public Dictionary<Settlement, HouseInventory> HouseInventory;
+    private HouseData _currentData;
 
-    
+
     public HousingManager()
     {
         _path = Path.Combine(BasePath.Name, "Modules", 
@@ -86,6 +88,8 @@ public class HousingManager : GenericSingleton<HousingManager>
             HouseInventory[settlement].Datas ??= new Dictionary<HouseTier, HouseData>();
             HouseInventory[settlement].Datas.Add(config.Tier,data);
             Hero.MainHero.Gold -= pricing;
+            InformationManager.DisplayMessage(new InformationMessage($"You bought a {config.Name} for {pricing}", 
+                Color.FromUint(Convert.ToUInt32("0x72f795", 16))));
         }
     }
 
@@ -96,5 +100,31 @@ public class HousingManager : GenericSingleton<HousingManager>
             return false;
         }
         return HouseInventory[settlement].Datas.ContainsKey(tier);
+    }
+
+    public void OpenHouseRoster(Settlement settlement, HouseTier houseTier)
+    {
+        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null)
+        {
+            return;
+        }
+        _currentData = HouseInventory[settlement].Datas[houseTier];
+        _currentData.ItemRoster.RosterUpdatedEvent += OnItemRosterUpdated;
+        InventoryManager.OpenScreenAsStash(_currentData.ItemRoster);
+        InventoryManager.InventoryLogic.AfterTransfer += OnAfterTransfer;
+    }
+
+    private void OnAfterTransfer(InventoryLogic inventorylogic, List<TransferCommandResult> results)
+    {
+        InventoryManager.InventoryLogic.AfterTransfer -= OnAfterTransfer;
+        _currentData.ItemRoster.RosterUpdatedEvent -= OnItemRosterUpdated;
+    }
+
+    private void OnItemRosterUpdated(ItemRosterElement item, int count)
+    {
+        if (_currentData.ItemRoster.Count > _currentData.StorageCapacity)
+        {
+            InventoryManager.InventoryLogic.TransferOne(item);
+        }
     }
 }
