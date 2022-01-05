@@ -4,7 +4,7 @@
       "Id": "house_tier_1",
       "Name": "Simple House",
       "SceneName": "empire_houseT1",
-      "Pricing": [1,1],
+      "Pricing": [1000,1000],
       "SettlementId": "",
       "StorageCapacity": 100,
       "Tier": "Tier1"
@@ -12,6 +12,6 @@
   ],
   "Settings": {
     "GoodProsperity": 200,
-    "RentRevenuePercentage": 10
+    "RentRevenuePercentage": 50
   }
 }

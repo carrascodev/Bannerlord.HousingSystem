@@ -88,7 +88,7 @@ public class HousingManager : GenericSingleton<HousingManager>
             
             HouseInventory[settlement].Datas ??= new Dictionary<HouseTier, HouseData>();
             HouseInventory[settlement].Datas.Add(config.Tier,data);
-            GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, pricing);
+            GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, pricing * -1);
             InformationManager.DisplayMessage(new InformationMessage($"You bought a {config.Name} for {pricing}", 
                 Color.FromUint(Convert.ToUInt32("0xc4ff5e", 16))));
         }
@@ -136,7 +136,7 @@ public class HousingManager : GenericSingleton<HousingManager>
             return;
         }
 
-        HouseInventory[settlement].Datas[tier].IsRented = true;
+        HouseInventory[settlement].Datas[tier].IsRented = rent;
     }
 
     public int GetRentRevenue(Settlement settlement, HouseTier tier)

@@ -45,10 +45,13 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
                 amountToEarn += ((prices * _housingManager.Settings.RentRevenuePercentage) / 100);
             }
         }
-        GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, amountToEarn);
-        InformationManager.DisplayMessage(new InformationMessage($"Weekly rent earnings added: ${amountToEarn}",
-            Color.FromUint(Convert.ToUInt32("0x95ff85", 16))));
 
+        if (amountToEarn > 0)
+        {
+            GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, amountToEarn);
+            InformationManager.DisplayMessage(new InformationMessage($"Weekly rent earnings added: ${amountToEarn}",
+                Color.FromUint(Convert.ToUInt32("0x95ff85", 16))));
+        }
     }
 
     private void OnSessionLaunched(CampaignGameStarter starter)
@@ -124,7 +127,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
     {
         if (_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
         {
-            MBTextManager.SetTextVariable("HOUSE_OPTION_" + config.Id, $"Manager your {config.Name}");
+            MBTextManager.SetTextVariable("HOUSE_OPTION_" + config.Id, $"Manage your {config.Name}");
         }
         else
         {
@@ -175,6 +178,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
     {
         bool isRented = _housingManager.IsHouseRented(Settlement.CurrentSettlement, config);
         _housingManager.RentHouse(Settlement.CurrentSettlement, config.Tier, !isRented);
+        SetupSelectedHouseOptionText(config);
     }
 
     private void OnHouseOpenStorageConsequence(MenuCallbackArgs args, HouseConfig config)
