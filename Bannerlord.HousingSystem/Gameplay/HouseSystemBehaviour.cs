@@ -178,7 +178,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
     {
         bool isRented = _housingManager.IsHouseRented(Settlement.CurrentSettlement, config);
         _housingManager.RentHouse(Settlement.CurrentSettlement, config.Tier, !isRented);
-        SetupSelectedHouseOptionText(config);
+        GameMenu.SwitchToMenu(config.Id);
     }
 
     private void OnHouseOpenStorageConsequence(MenuCallbackArgs args, HouseConfig config)
