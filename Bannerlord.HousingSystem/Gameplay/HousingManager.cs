@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
@@ -87,9 +88,9 @@ public class HousingManager : GenericSingleton<HousingManager>
             
             HouseInventory[settlement].Datas ??= new Dictionary<HouseTier, HouseData>();
             HouseInventory[settlement].Datas.Add(config.Tier,data);
-            Hero.MainHero.Gold -= pricing;
+            GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, pricing);
             InformationManager.DisplayMessage(new InformationMessage($"You bought a {config.Name} for {pricing}", 
-                Color.FromUint(Convert.ToUInt32("0x72f795", 16))));
+                Color.FromUint(Convert.ToUInt32("0xc4ff5e", 16))));
         }
     }
 
@@ -126,5 +127,35 @@ public class HousingManager : GenericSingleton<HousingManager>
         {
             InventoryManager.InventoryLogic.TransferOne(item);
         }
+    }
+
+    public void RentHouse(Settlement settlement, HouseTier tier, bool rent = true)
+    {
+        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null || HouseInventory[settlement].Datas[tier].IsRented)
+        {
+            return;
+        }
+
+        HouseInventory[settlement].Datas[tier].IsRented = true;
+    }
+
+    public int GetRentRevenue(Settlement settlement, HouseTier tier)
+    {
+        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null || !HouseInventory[settlement].Datas[tier].IsRented)
+        {
+            return 0;
+        }
+        
+        return HouseInventory[settlement].Datas[tier].PricePaid / Settings.RentRevenuePercentage;
+    }
+
+    public bool IsHouseRented(Settlement settlement, HouseConfig config)
+    {
+        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null)
+        {
+            return false;
+        }
+
+        return HouseInventory[settlement].Datas[config.Tier].IsRented;
     }
 }

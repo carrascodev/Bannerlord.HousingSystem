@@ -2,9 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Overlay;
+using TaleWorlds.Core;
 using TaleWorlds.Engine;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
@@ -24,7 +27,28 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private void OnWeeklyTick()
     {
-        //TODO: 
+        if (_housingManager.HouseInventory == null)
+        {
+            return;
+        }
+        
+        int amountToEarn = 0;
+        foreach (HouseInventory houseInventory in _housingManager.HouseInventory.Values)
+        {
+            var prices = houseInventory.Datas
+                .Where(d => d.Value.IsRented)
+                .Select(d => d.Value)
+                .Sum(h => h.PricePaid);
+
+            if (prices > 0)
+            {
+                amountToEarn += ((prices * _housingManager.Settings.RentRevenuePercentage) / 100);
+            }
+        }
+        GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, amountToEarn);
+        InformationManager.DisplayMessage(new InformationMessage($"Weekly rent earnings added: ${amountToEarn}",
+            Color.FromUint(Convert.ToUInt32("0x95ff85", 16))));
+
     }
 
     private void OnSessionLaunched(CampaignGameStarter starter)
@@ -52,11 +76,14 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
             starter.AddGameMenuOption("housing_menu", config.Id, $"{{=!}}{{HOUSE_OPTION_{config.Id}}}",
                 args => CanBuyOrOpenHouseCondition(args, config),
                 args => OnBuyOrOpenHouseConsequence(args, config));
-            starter.AddGameMenu(config.Id, "{=!}" + config.Name + " Menu", _ => { }, GameOverlays.MenuOverlayType.SettlementWithBoth);
+            starter.AddGameMenu(config.Id, "{=!}" + config.Name + " Menu", _ =>
+            {
+                SetupSelectedHouseOptionText(config);
+            }, GameOverlays.MenuOverlayType.SettlementWithBoth);
             starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", 
                 args => true, 
                 args => OnHouseEnterConsequence(args, config));
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}Rent", 
+            starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}{HOUSE_RENT_OPTION}", 
                 args => true, 
                 args => OnHouseRentConsequence(args, config));
             starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Open Storage", 
@@ -106,6 +133,18 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         }
     }
 
+    private void SetupSelectedHouseOptionText(HouseConfig config)
+    {
+        if (!_housingManager.IsHouseRented(Settlement.CurrentSettlement, config))
+        {
+            MBTextManager.SetTextVariable("HOUSE_RENT_OPTION", $"Rent it out");
+        }
+        else
+        {
+            MBTextManager.SetTextVariable("HOUSE_RENT_OPTION", $"Stop renting");
+        }
+    }
+
     private void OnBuyOrOpenHouseConsequence(MenuCallbackArgs args, HouseConfig config)
     {
         if (!_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
@@ -134,7 +173,8 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private void OnHouseRentConsequence(MenuCallbackArgs args, HouseConfig config)
     {
-        //TODO: 
+        bool isRented = _housingManager.IsHouseRented(Settlement.CurrentSettlement, config);
+        _housingManager.RentHouse(Settlement.CurrentSettlement, config.Tier, !isRented);
     }
 
     private void OnHouseOpenStorageConsequence(MenuCallbackArgs args, HouseConfig config)
