@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Helpers;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.GameMenus;
@@ -20,7 +21,6 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     public override void RegisterEvents()
     {
-        _housingManager.HouseInventory = new Dictionary<Settlement, HouseInventory>();
         CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
         CampaignEvents.WeeklyTickEvent.AddNonSerializedListener((object) this, OnWeeklyTick);
     }
@@ -33,10 +33,9 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         }
         
         int amountToEarn = 0;
-        foreach (HouseInventory houseInventory in _housingManager.HouseInventory.Values)
+        foreach (Dictionary<HouseTier, HouseData> houseInventory in _housingManager.HouseInventory.Values)
         {
-            var prices = houseInventory.Datas
-                .Where(d => d.Value.IsRented)
+            var prices = houseInventory.Where(d => d.Value.IsRented)
                 .Select(d => d.Value)
                 .Sum(h => h.PricePaid);
 
@@ -84,13 +83,13 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
                 SetupSelectedHouseOptionText(config);
             }, GameOverlays.MenuOverlayType.SettlementWithBoth);
             starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", 
-                args => true, 
+                args => !_housingManager.IsHouseRented(Settlement.CurrentSettlement, config), 
                 args => OnHouseEnterConsequence(args, config));
             starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}{HOUSE_RENT_OPTION}", 
                 args => true, 
                 args => OnHouseRentConsequence(args, config));
             starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Open Storage", 
-                args => true, 
+                args => !_housingManager.IsHouseRented(Settlement.CurrentSettlement, config), 
                 args => OnHouseOpenStorageConsequence(args, config));
             starter.AddGameMenuOption(config.Id, config.Id+"_go_back", "Go Back", _ => true, args =>
             {
@@ -163,20 +162,17 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         return Settlement.CurrentSettlement.IsTown;
     }
 
-    public override void SyncData(IDataStore dataStore)
-    {
-        dataStore.SyncData("_house_inventory", ref _housingManager.HouseInventory);
-    }
-
     private void OnHouseEnterConsequence(MenuCallbackArgs args, HouseConfig config)
     {
         var locationEncounter = new HouseEncounter(Settlement.CurrentSettlement,config.Id, config.SceneName);
-        locationEncounter.CreateAndOpenMissionController(null);
+        PlayerEncounter.LocationEncounter = locationEncounter;
+        var mission = locationEncounter.CreateAndOpenMissionController(null) as Mission;
+        //TODO:
     }
 
     private void OnHouseRentConsequence(MenuCallbackArgs args, HouseConfig config)
     {
-        bool isRented = _housingManager.IsHouseRented(Settlement.CurrentSettlement, config);
+        bool isRented = _housingManager.IsHouseRented(Settlement.CurrentSettlement, config); // true
         _housingManager.RentHouse(Settlement.CurrentSettlement, config.Tier, !isRented);
         GameMenu.SwitchToMenu(config.Id);
     }
@@ -184,5 +180,10 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
     private void OnHouseOpenStorageConsequence(MenuCallbackArgs args, HouseConfig config)
     {
         HousingManager.Instance.OpenHouseRoster(Settlement.CurrentSettlement, config.Tier);
+    }
+    
+    public override void SyncData(IDataStore dataStore)
+    {
+        dataStore.SyncData("_house_inventory", ref _housingManager.HouseInventory);
     }
 }

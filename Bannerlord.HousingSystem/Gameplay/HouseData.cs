@@ -6,15 +6,18 @@ namespace Bannerlord.HousingSystem;
 
 public class HouseData
 {
-    [SaveableProperty(1)]
-    public string ConfigId { get; set; }
-    [SaveableProperty(2)]
-    public int PricePaid { get; set; }
-    [SaveableProperty(3)]
-    public ItemRoster ItemRoster { get; set; }
-    [SaveableProperty(4)]
-    public int StorageCapacity { get; set; }
+    [SaveableField(1)]
+    public string ConfigId;
 
-    [SaveableProperty(5)]
-    public bool IsRented { get; set; }
+    [SaveableField(2)]
+    public int PricePaid;
+
+    [SaveableField(3)]
+    public ItemRoster ItemRoster;
+
+    [SaveableField(4)]
+    public int StorageCapacity;
+    
+    [SaveableField(5)]
+    public bool IsRented;
 }

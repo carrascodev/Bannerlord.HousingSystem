@@ -6,18 +6,20 @@ namespace Bannerlord.HousingSystem;
 
 public class SaveDefiner : SaveableTypeDefiner
 {
-    public SaveDefiner() : base(487420007)
+    public SaveDefiner() : base(4_420_421)
     {
     }
 
     protected override void DefineClassTypes()
     {
-        AddClassDefinition(typeof(HouseData),1);
-        AddClassDefinition(typeof(HouseInventory),2);
+        AddEnumDefinition(typeof(HouseTier),1);
+        AddClassDefinition(typeof(HouseData),2);
+        AddClassDefinition(typeof(HouseInventory),3);
     }
 
     protected override void DefineContainerDefinitions()
     {
-        ConstructContainerDefinition(typeof(Dictionary<Settlement, HouseInventory>));
+        ConstructContainerDefinition(typeof(Dictionary<HouseTier, HouseData>));
+        ConstructContainerDefinition(typeof(Dictionary<string, Dictionary<HouseTier, HouseData>>));
     }
 }

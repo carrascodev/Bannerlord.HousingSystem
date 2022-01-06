@@ -18,7 +18,7 @@ public class HousingManager : GenericSingleton<HousingManager>
     public List<HouseConfig> Config { get; private set; }
     public HousingSettings Settings { get; private set; }
     
-    public Dictionary<Settlement, HouseInventory> HouseInventory;
+    public Dictionary<string, Dictionary<HouseTier, HouseData>> HouseInventory;
     private HouseData _currentData;
 
 
@@ -27,6 +27,7 @@ public class HousingManager : GenericSingleton<HousingManager>
         _path = Path.Combine(BasePath.Name, "Modules", 
             "Bannerlord.HousingSystem", "Data", "Config.json");
         Load();
+        HouseInventory = new Dictionary<string, Dictionary<HouseTier, HouseData>>();
     }
     
     public void Load()
@@ -58,7 +59,8 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     public bool CanBuyHouse(Settlement settlement,HouseConfig config)
     {
-        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas != null)
+        var settlementId = settlement.Id.ToString();
+        if (!HouseInventory.ContainsKey(settlementId) || HouseInventory[settlementId] != null)
         {
             var pricing = GetHousePriceForSettlement(settlement,config);
             if (!IsHouseBought(settlement,config.Tier) && Hero.MainHero.Gold >= pricing)
@@ -70,6 +72,7 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     public void BuyHouse(Settlement settlement, HouseConfig config)
     {
+        var settlementId = settlement.Id.ToString();
         if (CanBuyHouse(settlement, config))
         {
             var pricing = GetHousePriceForSettlement(settlement,config);
@@ -81,13 +84,13 @@ public class HousingManager : GenericSingleton<HousingManager>
                 StorageCapacity = config.StorageCapacity
                 
             };
-            if (!HouseInventory.ContainsKey(settlement))
+            if (!HouseInventory.ContainsKey(settlementId))
             {
-                HouseInventory.Add(settlement,new HouseInventory() { Datas = new Dictionary<HouseTier, HouseData>()});
+                HouseInventory.Add(settlementId,new Dictionary<HouseTier, HouseData>());
             }
             
-            HouseInventory[settlement].Datas ??= new Dictionary<HouseTier, HouseData>();
-            HouseInventory[settlement].Datas.Add(config.Tier,data);
+            HouseInventory[settlementId] ??= new Dictionary<HouseTier, HouseData>();
+            HouseInventory[settlementId].Add(config.Tier,data);
             GiveGoldAction.ApplyBetweenCharacters(null, Hero.MainHero, pricing * -1);
             InformationManager.DisplayMessage(new InformationMessage($"You bought a {config.Name} for {pricing}", 
                 Color.FromUint(Convert.ToUInt32("0xc4ff5e", 16))));
@@ -96,20 +99,22 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     public bool IsHouseBought(Settlement settlement, HouseTier tier)
     {
-        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null)
+        var settlementId = settlement.Id.ToString();
+        if (!HouseInventory.ContainsKey(settlementId) || HouseInventory[settlementId] == null)
         {
             return false;
         }
-        return HouseInventory[settlement].Datas.ContainsKey(tier);
+        return HouseInventory[settlementId].ContainsKey(tier);
     }
 
     public void OpenHouseRoster(Settlement settlement, HouseTier houseTier)
     {
-        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null)
+        var settlementId = settlement.Id.ToString();
+        if (!HouseInventory.ContainsKey(settlementId) || HouseInventory[settlementId] == null)
         {
             return;
         }
-        _currentData = HouseInventory[settlement].Datas[houseTier];
+        _currentData = HouseInventory[settlementId][houseTier];
         _currentData.ItemRoster.RosterUpdatedEvent += OnItemRosterUpdated;
         InventoryManager.OpenScreenAsStash(_currentData.ItemRoster);
         InventoryManager.InventoryLogic.AfterTransfer += OnAfterTransfer;
@@ -131,31 +136,37 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     public void RentHouse(Settlement settlement, HouseTier tier, bool rent = true)
     {
-        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null || HouseInventory[settlement].Datas[tier].IsRented)
+        var settlementId = settlement.Id.ToString();
+        if (!HouseInventory.ContainsKey(settlementId) || HouseInventory[settlementId] == null)
         {
             return;
         }
 
-        HouseInventory[settlement].Datas[tier].IsRented = rent;
+        HouseInventory[settlementId][tier].IsRented = rent;
+        int amountToEarn = (HouseInventory[settlementId][tier].PricePaid * Settings.RentRevenuePercentage) / 100;
+        InformationManager.DisplayMessage(new InformationMessage($"You are now renting your property, predicted income: ${amountToEarn}",
+            Color.FromUint(Convert.ToUInt32("0x73daff", 16))));
     }
 
     public int GetRentRevenue(Settlement settlement, HouseTier tier)
     {
-        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null || !HouseInventory[settlement].Datas[tier].IsRented)
+        var settlementId = settlement.Id.ToString();
+        if (!HouseInventory.ContainsKey(settlementId) || HouseInventory[settlementId] == null || !HouseInventory[settlementId][tier].IsRented)
         {
             return 0;
         }
         
-        return HouseInventory[settlement].Datas[tier].PricePaid / Settings.RentRevenuePercentage;
+        return HouseInventory[settlementId][tier].PricePaid / Settings.RentRevenuePercentage;
     }
 
     public bool IsHouseRented(Settlement settlement, HouseConfig config)
     {
-        if (!HouseInventory.ContainsKey(settlement) || HouseInventory[settlement].Datas == null)
+        var settlementId = settlement.Id.ToString();
+        if (!HouseInventory.ContainsKey(settlementId) || HouseInventory[settlementId] == null)
         {
             return false;
         }
 
-        return HouseInventory[settlement].Datas[config.Tier].IsRented;
+        return HouseInventory[settlementId][config.Tier].IsRented;
     }
 }
