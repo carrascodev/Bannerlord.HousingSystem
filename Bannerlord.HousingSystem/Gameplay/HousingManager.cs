@@ -15,7 +15,7 @@ public class HousingManager : GenericSingleton<HousingManager>
 {
     private string _path;
 
-    public List<HouseConfig> Config { get; private set; }
+    public Dictionary<string,HouseConfig[]> Config { get; private set; }
     public HousingSettings Settings { get; private set; }
     
     public Dictionary<string, Dictionary<HouseTier, HouseData>> HouseInventory;
@@ -36,7 +36,7 @@ public class HousingManager : GenericSingleton<HousingManager>
         try
         {
             var json = JObject.Parse(file);
-            Config = json["HouseConfigs"].ToObject<List<HouseConfig>>();
+            Config = json["HouseConfigs"].ToObject<Dictionary<string,HouseConfig[]>>();
             Settings = json["Settings"].ToObject<HousingSettings>();
         }
         catch (JsonReaderException e)

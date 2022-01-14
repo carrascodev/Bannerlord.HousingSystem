@@ -1,9 +1,9 @@
+using System.Collections.Generic;
 using MessagePack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace Bannerlord.HousingSystem;
-
 [JsonObject]
 public class HouseConfig
 {
@@ -22,4 +22,7 @@ public class HouseConfig
     public int StorageCapacity { get; set; }
     [JsonProperty, JsonConverter(typeof(StringEnumConverter))]
     public HouseTier Tier { get; set; }
+    
+    [JsonProperty]
+    public string Culture { get; set; }
 }

@@ -1,6 +1,7 @@
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
+using TaleWorlds.MountAndBlade;
 using TaleWorlds.ObjectSystem;
 
 namespace Bannerlord.HousingSystem;
@@ -29,7 +30,7 @@ public class HouseEncounter : TownEncounter
         string playerSpecialSpawnTag = null)
     {
         
-        var missionController = CampaignMission.OpenIndoorMission(_sceneName, 0, _location, talkToChar);
+        var missionController = CampaignMission.OpenIndoorMission(_sceneName, 0, _location, talkToChar) as Mission;
         return missionController;
     }
 }

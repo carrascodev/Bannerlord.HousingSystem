@@ -1,15 +1,68 @@
 {
-  "HouseConfigs": [
-    {
-      "Id": "house_tier_1",
-      "Name": "Simple House",
-      "SceneName": "empire_houseT1",
-      "Pricing": [1000,1000],
-      "SettlementId": "",
-      "StorageCapacity": 100,
-      "Tier": "Tier1"
-    }
-  ],
+  "HouseConfigs": {
+    "Empire": [
+      {
+        "Id": "house_empire_tier_1",
+        "Name": "House Tier 1",
+        "SceneName": "empire_houseT1",
+        "Pricing": [
+          1000,
+          2000
+        ],
+        "Culture": "Empire",
+        "StorageCapacity": 30,
+        "Tier": "Tier1"
+      },
+      {
+        "Id": "house_empire_tier_2",
+        "Name": "House Tier 2",
+        "SceneName": "empire_houseT2",
+        "Pricing": [
+          10000,
+          20000
+        ],
+        "Culture": "Empire",
+        "StorageCapacity": 50,
+        "Tier": "Tier2"
+      },
+      {
+        "Id": "house_empire_tier_3",
+        "Name": "House Tier 3",
+        "SceneName": "empire_houseT3",
+        "Pricing": [
+          30000,
+          20000
+        ],
+        "Culture": "Empire",
+        "StorageCapacity": 100,
+        "Tier": "Tier3"
+      },
+      {
+        "Id": "house_empire_tier_4",
+        "Name": "House Tier 4",
+        "SceneName": "empire_houseT4",
+        "Pricing": [
+          30000,
+          20000
+        ],
+        "Culture": "Empire",
+        "StorageCapacity": 200,
+        "Tier": "Tier4"
+      },
+      {
+        "Id": "house_empire_tier_5",
+        "Name": "House Tier 5",
+        "SceneName": "empire_houseT5",
+        "Pricing": [
+          30000,
+          20000
+        ],
+        "Culture": "Empire",
+        "StorageCapacity": 300,
+        "Tier": "Tier5"
+      }
+    ]
+  },
   "Settings": {
     "GoodProsperity": 200,
     "RentRevenuePercentage": 50

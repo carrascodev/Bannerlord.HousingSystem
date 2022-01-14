@@ -23,19 +23,5 @@
     </SubModule>
   </SubModules>
   <Xmls>
-    <XmlNode>
-      <XmlName id="LocationComplexTemplates" path="location_complex_templates"/>
-      <IncludeGameTypes>
-        <GameType value = "Campaign"/>
-        <GameType value = "CampaignStoryMode"/>
-      </IncludeGameTypes>
-    </XmlNode>
-    <XmlNode>
-      <XmlName id="Settlements" path="settlements"/>
-      <IncludeGameTypes>
-        <GameType value = "Campaign"/>
-        <GameType value = "CampaignStoryMode"/>
-      </IncludeGameTypes>
-    </XmlNode>
-    </Xmls>
+  </Xmls>
 </Module>

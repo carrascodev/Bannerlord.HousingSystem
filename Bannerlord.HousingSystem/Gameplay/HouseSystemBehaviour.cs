@@ -63,38 +63,46 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
         starter.AddGameMenuOption("town", "town_housing", "{=!}Houses", CanOpenHousingMenu,
             (args) => OnOpenHousingMenuConsequence(args, starter));
 
-        var configs = _housingManager.Config;
+        Dictionary<string, HouseConfig[]> configs = _housingManager.Config;
         
         starter.AddGameMenu("housing_menu", "{=!}House Menu", _ =>
         {
-            foreach (var config in configs)
+            var cultureName = Settlement.CurrentSettlement.Culture.Name.ToString();
+            if (configs.ContainsKey(cultureName))
             {
-                SetupOptionText(config);
+                var currentConfig = configs[Settlement.CurrentSettlement.Culture.Name.ToString()];
+                foreach (var houseConfig in currentConfig)
+                {
+                    SetupOptionText(houseConfig);
+                }    
             }
         });
         
-        foreach (var config in configs)
+        foreach (var cultureConfig in configs)
         {
-            starter.AddGameMenuOption("housing_menu", config.Id, $"{{=!}}{{HOUSE_OPTION_{config.Id}}}",
-                args => CanBuyOrOpenHouseCondition(args, config),
-                args => OnBuyOrOpenHouseConsequence(args, config));
-            starter.AddGameMenu(config.Id, "{=!}" + config.Name + " Menu", _ =>
+            foreach (var config in cultureConfig.Value)
             {
-                SetupSelectedHouseOptionText(config);
-            }, GameOverlays.MenuOverlayType.SettlementWithBoth);
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", 
-                args => !_housingManager.IsHouseRented(Settlement.CurrentSettlement, config), 
-                args => OnHouseEnterConsequence(args, config));
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}{HOUSE_RENT_OPTION}", 
-                args => true, 
-                args => OnHouseRentConsequence(args, config));
-            starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Open Storage", 
-                args => !_housingManager.IsHouseRented(Settlement.CurrentSettlement, config), 
-                args => OnHouseOpenStorageConsequence(args, config));
-            starter.AddGameMenuOption(config.Id, config.Id+"_go_back", "Go Back", _ => true, args =>
-            {
-                GameMenu.SwitchToMenu("housing_menu");
-            });
+                starter.AddGameMenuOption("housing_menu", config.Id, $"{{=!}}{{HOUSE_OPTION_{config.Id}}}",
+                    args => CanBuyOrOpenHouseCondition(args, config),
+                    args => OnBuyOrOpenHouseConsequence(args, config));
+                starter.AddGameMenu(config.Id, "{=!}" + config.Name + " Menu", _ =>
+                {
+                    SetupSelectedHouseOptionText(config);
+                }, GameOverlays.MenuOverlayType.SettlementWithBoth);
+                starter.AddGameMenuOption(config.Id, $"{config.Id}_enter", "{=!}Enter in house", 
+                    args => !_housingManager.IsHouseRented(Settlement.CurrentSettlement, config), 
+                    args => OnHouseEnterConsequence(args, config));
+                starter.AddGameMenuOption(config.Id, $"{config.Id}_rent", "{=!}{HOUSE_RENT_OPTION}", 
+                    args => true, 
+                    args => OnHouseRentConsequence(args, config));
+                starter.AddGameMenuOption(config.Id, $"{config.Id}_open_storage", "{=!}Open Storage", 
+                    args => !_housingManager.IsHouseRented(Settlement.CurrentSettlement, config), 
+                    args => OnHouseOpenStorageConsequence(args, config));
+                starter.AddGameMenuOption(config.Id, config.Id+"_go_back", "Go Back", _ => true, args =>
+                {
+                    GameMenu.SwitchToMenu("housing_menu");
+                });   
+            }
         }
         starter.AddGameMenuOption("housing_menu", "go_back", "Go Back", _ => true, args =>
         {
@@ -114,6 +122,11 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private bool CanBuyOrOpenHouseCondition(MenuCallbackArgs args, HouseConfig config)
     {
+        if (Settlement.CurrentSettlement.Culture.Name.ToString() != config.Culture)
+        {
+            return false;
+        }
+        
         if (_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
         {
             return true; // Can Open/Enter
@@ -149,6 +162,11 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private void OnBuyOrOpenHouseConsequence(MenuCallbackArgs args, HouseConfig config)
     {
+        if (Settlement.CurrentSettlement.Culture.Name.ToString() != config.Culture)
+        {
+            return;
+        }
+        
         if (!_housingManager.IsHouseBought(Settlement.CurrentSettlement, config.Tier))
         {
             _housingManager.BuyHouse(Settlement.CurrentSettlement, config);
