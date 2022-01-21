@@ -1,5 +1,8 @@
-334
+352
+flora_entity artemis_white
+flora_entity flora_fern_b
 flora_entity flora_grass_a
+flora_entity flora_grass_aa
 flora_entity flora_grass_b
 flora_entity flora_green__mix
 flora_entity flora_green__mix_flower
@@ -9,6 +12,8 @@ flora_entity flora_reed_c
 flora_entity flora_reed_d
 flora_entity flora_reed_e
 flora_entity flora_reed_f
+flora_entity flora_shrub_a
+flora_entity flora_shrub_d
 flora_entity flora_tree_spruce_field
 flora_entity flora_tree_spruce_forest
 flora_entity flora_tree_spruce_mix
@@ -21,10 +26,15 @@ flora_entity tree_forest_beech___mix
 flora_entity tree_high__mix_aspen
 flora_entity tree_high__mix_poplar
 flora_entity tree_high__mix_poplar_forest
+flora_entity tree_olive_a
+flora_entity valley_plant_a
 flora_entity valley_plant_b
 flora_entity valley_plant_c
 flora_entity valley_plant_d
 flora_entity wheats_green
+mesh animation_stand_arrow_blue
+mesh arrow_new_icon
+mesh bd_chair_b
 mesh editor_plane_low
 mesh empire_garden_wall_a2
 mesh empire_hippodrome_door_b_close
@@ -44,19 +54,18 @@ mesh empire_keep_d_window_a
 mesh empire_keep_d_window_c
 mesh empire_keep_d_window_h
 mesh empire_village_house_d
-mesh tree_aspen_summer
-mesh tree_aspen_summer_3
-mesh tree_aspen_summer_7
 prefab Boardgame Aserai
 prefab Boardgame Sturgia
+prefab SpawnPointDebugView
 prefab __empty_object
+prefab _barrier_passage_center
 prefab _to_carry_arm_kitchen_pot_c
 prefab _to_carry_foods_basket_apple
 prefab animation_point
-prefab animation_point_lean_left
 prefab aquila
 prefab arrow_barrel
-prefab audience
+prefab bd_barrel_a
+prefab bd_barrel_heap_b
 prefab bd_basket_aserai_a
 prefab bd_basket_aserai_b
 prefab bd_basket_aserai_c
@@ -66,13 +75,13 @@ prefab bd_basket_heap_aserai_a
 prefab bd_basket_heap_aserai_b
 prefab bd_carpet_khuzait_round_a
 prefab bd_chair_b_unsittable
-prefab bd_chair_empire_a_pillow_b
 prefab bd_chair_empire_a_pillow_c
 prefab bd_chair_empire_a_pillow_c_unsittable
-prefab bd_chair_empire_b_pillow_a_unsittable
 prefab bd_chair_empire_b_pillow_c
 prefab bd_chair_empire_c_pillow_a
 prefab bd_chair_empire_c_pillow_a_unsittable
+prefab bd_chair_f_unsittable
+prefab bd_chair_knit
 prefab bd_empire_seat_a_unsittable
 prefab bd_empire_seat_b
 prefab bd_empire_seat_b_unsittable
@@ -82,10 +91,8 @@ prefab bd_hay_cart_b
 prefab bd_rope_sturgia_a
 prefab bd_sturgia_pot_b
 prefab bd_table_d
-prefab bd_table_e
 prefab bd_tapestry_imperial_a
 prefab bd_tapestry_imperial_b
-prefab bucket
 prefab candle_flame
 prefab candle_flame_01
 prefab carpet_empire_a
@@ -107,6 +114,9 @@ prefab crate_a_lid
 prefab crate_b
 prefab crate_b_empty
 prefab crate_b_lid
+prefab crate_c
+prefab detail_distant_birds_sound
+prefab detail_lake_gust_sound
 prefab dragon_banner_center
 prefab dragon_banner_handle
 prefab dragonbanner
@@ -176,6 +186,7 @@ prefab empire_keep_d_window_a
 prefab empire_keep_d_window_b
 prefab empire_keep_d_window_c
 prefab empire_keep_d_window_e
+prefab empire_lord_pot_brass
 prefab empire_lord_pot_c
 prefab empire_lord_pot_d
 prefab empire_lord_pot_p
@@ -206,6 +217,7 @@ prefab flame_loop
 prefab foods_basket_apple
 prefab foods_basket_cabbage
 prefab foods_cabbage_a
+prefab forest_ambient_sound
 prefab hawk
 prefab hawk_stand_a_with_hawk
 prefab hawk_stand_holder
@@ -221,13 +233,15 @@ prefab kitchen_pitcher_a
 prefab kitchen_pitcher_c
 prefab kitchen_pitcher_d
 prefab kitchen_plate_grape
-prefab left_hand_position
 prefab lib_book_closed_b
-prefab lib_book_open_c
+prefab lib_book_closed_c
+prefab lib_inkwell
+prefab lib_quill_pen
 prefab lib_scroll_c
 prefab lib_scroll_d
 prefab market_apple_crate
 prefab market_cabbage_crate
+prefab market_leek_crate
 prefab market_potteryPile2
 prefab mat_carpet_h
 prefab mat_carpet_i
@@ -239,6 +253,8 @@ prefab merchandise_pottery
 prefab module_european_floor_c
 prefab mountain_border_a
 prefab orientation_fix
+prefab pair
+prefab passage_use_point
 prefab physics
 prefab pot_b
 prefab pot_heap_c
@@ -246,6 +262,7 @@ prefab prop_merchanthorse_a
 prefab prop_merchanthorse_b
 prefab prt_torch_light
 prefab reverb_gatehouse
+prefab rock_001
 prefab ruinous_castle_wall_a
 prefab ruinous_castle_wall_b
 prefab ruinous_castle_wall_c
@@ -265,6 +282,7 @@ prefab sp_attacker_horsearcher_reinforcement
 prefab sp_attacker_infantry
 prefab sp_attacker_infantry_reinforcement
 prefab sp_battle_set
+prefab sp_common
 prefab sp_defender_archer
 prefab sp_defender_archer_reinforcement
 prefab sp_defender_cavalry
@@ -275,16 +293,16 @@ prefab sp_defender_infantry
 prefab sp_defender_infantry_reinforcement
 prefab sp_guard
 prefab sp_guard_lords_hall_gate
-prefab sp_horse_war_horse
-prefab sp_npc_clean_wall_set
-prefab sp_npc_instructor
-prefab sp_npc_instructor_with_guards
-prefab sp_npc_left
-prefab sp_npc_listener
-prefab sp_npc_right
-prefab sp_npc_sitting_and_reading
-prefab sp_npc_wall_side_lean_left
+prefab sp_guard_sit_and_nap
+prefab sp_mercenary
+prefab sp_npc_lookout_point
+prefab sp_npc_merchant_working
+prefab sp_npc_soldier_reporting
 prefab sp_player
+prefab sp_player_tavern
+prefab sp_tavern_wench
+prefab sp_taverngamehost
+prefab sp_tavernkeeper
 prefab table_empire_a
 prefab table_empire_b
 prefab table_empire_c
@@ -303,9 +321,9 @@ prefab torch_light_
 prefab torch_long_a
 prefab torch_wall_a
 prefab torch_wall_d
+prefab village_ambient_sound
 prefab vlandia_arena_decoration_cloth_b1
 prefab vlandia_onehanded_sword_scabbard_c_still
-prefab wall
 prefab weapon_heap_bow_a
 prefab weapon_heap_crossbow_a
 texture black_terrain

@@ -1,15 +1,18 @@
-119
-mesh boardgame_tablut
-mesh boardpiece_tablut_black
-mesh boardpiece_tablut_king
-mesh boardpiece_tablut_white
-mesh debug_lod_mesh
+131
+mesh animation_stand_arrow_blue
+mesh arrow_new_icon
+mesh bd_chair_b
 mesh editor_plane_low
-mesh valid_tile
+mesh empire_house_shrine_a
 prefab Boardgame Aserai
+prefab SpawnPointDebugView
+prefab _barrier_passage_center
+prefab animation_point
 prefab armor_merchant_helmet_c
+prefab aserai_courtyard_fountain_a
 prefab bd_aserai_pot_cupper_b
 prefab bd_carpet_khuzait_round_a
+prefab bd_chair_b_01
 prefab bd_chair_empire_b_pillow_a
 prefab bd_chair_empire_b_pillow_b
 prefab bd_chair_empire_b_pillow_b_unsittable
@@ -30,11 +33,14 @@ prefab carpet_empire_b
 prefab carpet_empire_c
 prefab carpet_empire_e
 prefab chair_sit_position_front
+prefab chair_sit_position_left
+prefab chair_sit_position_right
 prefab debris_holder
 prefab empire_castle_wall_a_roof
 prefab empire_cupboard_a
 prefab empire_endtable_a
 prefab empire_hippodrome_enterance_wall_a2
+prefab empire_house_shrine_a
 prefab empire_keep_a_emblem_a
 prefab empire_keep_d_interior_wall_art_a1
 prefab empire_keep_d_interior_wall_art_b2
@@ -86,6 +92,7 @@ prefab merlon_4
 prefab merlon_5
 prefab merlon_6
 prefab merlon_7
+prefab passage_use_point
 prefab pen
 prefab prop_merchantwinery_b
 prefab prt_torch_light
@@ -93,7 +100,12 @@ prefab shop_prop_merchantbeer_e
 prefab shop_prop_merchantpottery_f
 prefab shop_prop_merchantsiege_e
 prefab shop_prop_merchantweavery_velvet_e
+prefab sp_guard
+prefab sp_mercenary
+prefab sp_npc_tavern_keeper_working
 prefab sp_player
+prefab sp_tavern_wench
+prefab sp_tavernkeeper
 prefab table_empire_a
 prefab table_empire_e
 prefab table_empire_f

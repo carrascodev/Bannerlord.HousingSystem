@@ -6,8 +6,8 @@
         "Name": "House Tier 1",
         "SceneName": "empire_houseT1",
         "Pricing": [
-          1000,
-          2000
+          5000,
+          6000
         ],
         "Culture": "Empire",
         "StorageCapacity": 30,
@@ -31,7 +31,7 @@
         "SceneName": "empire_houseT3",
         "Pricing": [
           30000,
-          20000
+          40000
         ],
         "Culture": "Empire",
         "StorageCapacity": 100,
@@ -42,8 +42,8 @@
         "Name": "House Tier 4",
         "SceneName": "empire_houseT4",
         "Pricing": [
-          30000,
-          20000
+          50000,
+          60000
         ],
         "Culture": "Empire",
         "StorageCapacity": 200,
@@ -54,17 +54,79 @@
         "Name": "House Tier 5",
         "SceneName": "empire_houseT5",
         "Pricing": [
-          30000,
-          20000
+          70000,
+          80000
         ],
         "Culture": "Empire",
+        "StorageCapacity": 300,
+        "Tier": "Tier5"
+      }
+    ],
+    "Aserai": [
+      {
+        "Id": "house_aserai_tier_1",
+        "Name": "House Tier 1",
+        "SceneName": "aserai_house1",
+        "Pricing": [
+          5000,
+          6000
+        ],
+        "Culture": "Aserai",
+        "StorageCapacity": 30,
+        "Tier": "Tier1"
+      },
+      {
+        "Id": "house_aserai_tier_2",
+        "Name": "House Tier 2",
+        "SceneName": "aserai_house2",
+        "Pricing": [
+          10000,
+          20000
+        ],
+        "Culture": "Aserai",
+        "StorageCapacity": 50,
+        "Tier": "Tier2"
+      },
+      {
+        "Id": "house_aserai_tier_3",
+        "Name": "House Tier 3",
+        "SceneName": "aserai_house3",
+        "Pricing": [
+          30000,
+          40000
+        ],
+        "Culture": "Aserai",
+        "StorageCapacity": 100,
+        "Tier": "Tier3"
+      },
+      {
+        "Id": "house_aserai_tier_4",
+        "Name": "House Tier 4",
+        "SceneName": "aserai_house4",
+        "Pricing": [
+          50000,
+          60000
+        ],
+        "Culture": "Aserai",
+        "StorageCapacity": 200,
+        "Tier": "Tier4"
+      },
+      {
+        "Id": "house_aserai_tier_5",
+        "Name": "House Tier 5",
+        "SceneName": "aserai_house5",
+        "Pricing": [
+          70000,
+          80000
+        ],
+        "Culture": "Aserai",
         "StorageCapacity": 300,
         "Tier": "Tier5"
       }
     ]
   },
   "Settings": {
-    "GoodProsperity": 200,
-    "RentRevenuePercentage": 50
+    "GoodProsperity": 1999,
+    "RentRevenuePercentage": 10
   }
 }

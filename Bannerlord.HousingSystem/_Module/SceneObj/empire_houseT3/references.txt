@@ -1,10 +1,16 @@
-154
+173
 mesh editor_plane_low
 mesh empire_house_a_interior
+mesh flora_grass_a_big
+mesh flora_grass_b_big_optimized
+mesh grass_terrain_a
 mesh mat_carpet_i
+prefab SpawnPointDebugView
+prefab _barrier_passage_center
 prefab _to_carry_arm_kitchen_pot_c
 prefab _to_carry_kitchen_pitcher_a
 prefab _to_carry_kitchen_pot_c
+prefab animation_point
 prefab armor_merchant_clothes_c
 prefab armor_merchant_clothes_e
 prefab armor_merchant_helmet_d
@@ -51,12 +57,18 @@ prefab chair_sit_position_right
 prefab chest_empire_b
 prefab chest_empire_c
 prefab empire_aqueduct
+prefab empire_castle_stairs_a_l2
+prefab empire_castle_stairs_b_l1
 prefab empire_cupboard_a
 prefab empire_endtable_a
 prefab empire_hippodrome_enterance_wall_a2
 prefab empire_hippodrome_enterance_wall_b2
 prefab empire_house_a
 prefab empire_house_b
+prefab empire_house_c
+prefab empire_house_d
+prefab empire_house_shrine_a
+prefab empire_house_tower_b2
 prefab empire_lord_pot_h
 prefab empire_lord_pot_o
 prefab empire_screen_a
@@ -103,10 +115,13 @@ prefab lib_scroll_c
 prefab mat_carpet_i
 prefab mead_cup_metal_c
 prefab mead_cup_metal_c_foam
+prefab passage_use_point
 prefab pottery_e
 prefab roman_houses_a
 prefab scene: empire_house_a_interior
 prefab scene: empire_house_b_interior
+prefab scene: empire_house_c_interior
+prefab scene: empire_house_d_interior
 prefab shelf_empire_a
 prefab shop_prop_merchantbakery_d
 prefab shop_prop_merchantbakery_e
@@ -133,8 +148,12 @@ prefab sp_defender_horsearcher
 prefab sp_defender_horsearcher_reinforcement
 prefab sp_defender_infantry
 prefab sp_defender_infantry_reinforcement
+prefab sp_mercenary
 prefab sp_player
 prefab sp_player_castle
+prefab sp_tavern_wench
+prefab sp_tavernkeeper
+prefab stairs_bo
 prefab table_dinner_a
 prefab table_empire_d
 prefab tavern_vlandia_table_a

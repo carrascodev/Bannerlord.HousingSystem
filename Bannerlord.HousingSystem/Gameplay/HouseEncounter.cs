@@ -33,4 +33,9 @@ public class HouseEncounter : TownEncounter
         var missionController = CampaignMission.OpenIndoorMission(_sceneName, 0, _location, talkToChar) as Mission;
         return missionController;
     }
+
+    public override bool IsTavern(Location location)
+    {
+        return true;
+    }
 }

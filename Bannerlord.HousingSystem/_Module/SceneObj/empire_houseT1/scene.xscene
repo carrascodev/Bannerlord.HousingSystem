@@ -41,49 +41,95 @@
 		</out_of_bounds_effects_properties>
 	</environment_properties>
 	<entities>
-		<game_entity prefab="empire_house_a">
-			<transform position="105.585, 136.943, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-			<children>
-				<game_entity visible="true" _index_="0"/>
-				<game_entity visible="true" _index_="1"/>
-			</children>
+		<game_entity prefab="_to_carry_bed_convolute_g">
+			<transform position="111.975, 124.636, 6.007" rotation_euler="-0.216, 0.092, -0.211" scale="0.600, 0.600, 0.600"/>
 		</game_entity>
-		<game_entity prefab="empire_house_bridge_e">
-			<transform position="113.888, 124.141, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="92.984, 130.226, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="brushwood_a">
-			<transform position="127.426, 114.454, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity name="ground_plane" old_prefab_name="">
+			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
+			<physics shape="bo_editor_plane"/>
 			<components>
-				<meta_mesh_component>
-					<mesh name="brushwood_a" argument="0.500, 0.000, 0.000, 0.000"/>
+				<meta_mesh_component name="editor_plane_low">
+					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="bd_basket_aserai_c">
-			<transform position="115.832, 127.152, 5.210" rotation_euler="0.000, 0.000, -0.157"/>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="141.127, 144.081, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="bd_chair_b_01">
+		<game_entity prefab="floor_dirt_b">
+			<transform position="123.851, 119.014, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_wood_heap_e">
+			<transform position="127.824, 113.929, 5.210" rotation_euler="0.000, 0.000, 0.074"/>
+		</game_entity>
+		<game_entity prefab="roman_houses_b">
+			<transform position="94.398, 138.773, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="floor_dirt_c">
+			<transform position="123.607, 113.306, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="armor_merchant_clothes_d">
+			<transform position="116.096, 120.181, 5.210" rotation_euler="0.000, 0.000, -1.675"/>
+		</game_entity>
+		<game_entity prefab="empire_grandbazaar_wall">
+			<transform position="111.100, 121.010, 4.980" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.496, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_grandbazaar_wall.6" material="roman_hippodrome_wall_plaster"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_right">
 			<tags>
 				<tag name="npc_wait"/>
-				<tag name="npc_common"/>
-				<tag name="gambler_npc"/>
+				<tag name="sp_thug"/>
 			</tags>
-			<transform position="153.174, 115.747, 5.781" rotation_euler="0.000, 0.000, -1.352"/>
+			<transform position="122.503, 118.292, 5.210" rotation_euler="0.000, 0.000, -1.619"/>
+		</game_entity>
+		<game_entity prefab="arabian_platform_wooden_c">
+			<transform position="133.380, 122.850, 5.310" rotation_euler="-0.016, 1.596, 0.068" scale="4.800, 2.600, 0.900"/>
 		</game_entity>
 		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="94.544, 116.982, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<transform position="99.798, 130.205, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="shop_sign__g">
-			<transform position="119.461, 133.850, 4.044" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="torch_candle_c_fire">
+			<transform position="112.339, 123.548, 6.008" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="brushwood_c">
+			<transform position="127.672, 115.966, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="brushwood_c" argument="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
 		</game_entity>
 		<game_entity prefab="foods_Maggots">
-			<transform position="122.296, 118.102, 5.210" rotation_euler="0.000, 0.000, 0.687"/>
+			<transform position="122.726, 118.348, 5.210" rotation_euler="0.000, 0.000, -0.378"/>
 		</game_entity>
-		<game_entity prefab="bed_straw_e">
-			<transform position="114.900, 118.157, 5.210" rotation_euler="0.000, 0.000, 3.046"/>
+		<game_entity prefab="kitchen_bowl_b_two">
+			<transform position="113.619, 127.231, 6.781" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity name="empire_statue_bust_place_a" old_prefab_name="">
+			<transform position="125.445, 125.888, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+			<physics shape="bo_empire_statue_bust_place_a" override_material="stone"/>
+			<components>
+				<meta_mesh_component name="empire_statue_bust_place_a"/>
+			</components>
+		</game_entity>
+		<game_entity prefab="mat_carpet_i">
+			<transform position="113.872, 122.746, 5.210" rotation_euler="0.000, 0.000, -1.593"/>
+		</game_entity>
+		<game_entity prefab="bd_mortar_and_pestle">
+			<transform position="115.388, 127.219, 6.798" rotation_euler="0.000, 0.000, -1.351"/>
+		</game_entity>
+		<game_entity prefab="bd_pillow_g">
+			<transform position="116.017, 119.430, 5.210" rotation_euler="0.000, 0.000, -1.827"/>
 		</game_entity>
 		<game_entity prefab="empire_aqueduct">
-			<transform position="218.033, 256.584, 0.000" rotation_euler="0.002, 0.000, 0.000"/>
+			<transform position="38.996, 256.705, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 			<components>
 				<meta_mesh_component>
 					<mesh name="empire_aqueduct.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
@@ -94,6 +140,125 @@
 			</components>
 		</game_entity>
 		<game_entity prefab="empire_hippodrome_enterance_wall_b2">
+			<transform position="121.760, 119.830, 5.410" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 1.300"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_hippodrome_enterance_wall_b2.2" material="roman_hippodrome_wall_plaster"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="bd_sack_c">
+			<transform position="116.101, 123.405, 5.210" rotation_euler="0.000, 0.000, -1.480"/>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="120.302, 130.232, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_e">
+			<transform position="119.089, 119.070, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="106.592, 130.208, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_hippodrome_enterance_wall_b2">
+			<transform position="119.430, 122.420, 5.310" rotation_euler="0.000, 0.000, 0.000" scale="1.090, 1.000, 1.400"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_hippodrome_enterance_wall_b2.2" material="roman_hippodrome_wall_plaster"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="141.154, 150.898, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_e">
+			<transform position="113.962, 119.129, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_flask_sturgia_b">
+			<transform position="114.307, 127.225, 6.782" rotation_euler="0.000, 0.000, -0.876"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="bd_flask_sturgia_b.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod1.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod2.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod3.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod4.10" argument="1.000, 0.010, 0.010, 1.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="127.226, 130.201, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_road_plaza_a">
+			<transform position="140.996, 130.258, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_castle_barn_b_l2_door">
+			<transform position="129.680, 119.950, 5.320" rotation_euler="0.000, 0.000, 1.571"/>
+		</game_entity>
+		<game_entity prefab="bd_cloth_wall_c">
+			<transform position="116.597, 123.459, 7.372" rotation_euler="0.000, 0.000, 1.691"/>
+		</game_entity>
+		<game_entity prefab="empire_house_shrine_a">
+			<transform position="95.726, 163.365, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.500, 1.500, 1.700"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_left_unsittable">
+			<transform position="112.161, 122.977, 5.210" rotation_euler="0.000, 0.000, -2.810"/>
+		</game_entity>
+		<game_entity prefab="sp_player">
+			<transform position="123.061, 114.972, 5.210" rotation_euler="0.000, 0.000, -1.565"/>
+		</game_entity>
+		<game_entity prefab="roman_house_big_a">
+			<transform position="167.587, 125.775, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_table_e">
+			<transform position="112.174, 124.205, 5.210" rotation_euler="0.000, 0.000, -1.596"/>
+		</game_entity>
+		<game_entity prefab="empire_grandbazaar_corner">
+			<transform position="141.274, 137.243, 0.145" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="pot_break_a">
+			<transform position="122.677, 121.348, 5.210" rotation_euler="0.000, 0.000, 1.109"/>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="86.067, 130.276, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_house_fake_d">
+			<transform position="121.835, 166.422, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="foods_Maggots">
+			<transform position="122.490, 117.840, 5.210" rotation_euler="0.000, 0.000, -0.324"/>
+		</game_entity>
+		<game_entity prefab="empire_house_b">
+			<transform position="126.300, 139.430, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
+			<children>
+				<game_entity visible="true" _index_="0"/>
+				<game_entity visible="true" _index_="1"/>
+			</children>
+		</game_entity>
+		<game_entity prefab="empire_house_bridge_e">
+			<transform position="119.143, 124.127, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="torch_wall_d">
+			<transform position="119.513, 127.584, 7.433" rotation_euler="0.000, 0.000, 0.050"/>
+		</game_entity>
+		<game_entity prefab="armor_merchant_shoe_c">
+			<transform position="111.800, 117.470, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="torch_wall_d">
+			<transform position="128.519, 116.722, 7.463" rotation_euler="0.000, 0.000, -1.808"/>
+		</game_entity>
+		<game_entity prefab="brushwood_d">
+			<transform position="127.670, 116.067, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="brushwood_d" argument="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_left">
+			<tags/>
+			<transform position="113.564, 124.770, 5.210" rotation_euler="0.000, 0.000, 2.407"/>
+		</game_entity>
+		<game_entity prefab="empire_hippodrome_enterance_wall_b2">
 			<transform position="125.310, 126.560, 5.210" rotation_euler="0.000, 0.000, 0.000" scale="1.500, 1.000, 1.500"/>
 			<components>
 				<meta_mesh_component>
@@ -101,108 +266,18 @@
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="empire_street_fountain_e">
-			<transform position="113.077, 133.366, 0.167" rotation_euler="0.000, 0.000, 0.000"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="empire_street_fountain_e.53" argument="1.000, 0.100, 1.270, 0.000" argument2="0.990, 0.170, 0.004, 0.500"/>
-					<mesh name="empire_street_fountain_e.55" argument="0.000, 1.000, 0.000, 0.000"/>
-					<mesh name="empire_street_fountain_e.lod2.53" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
-					<mesh name="empire_street_fountain_e.lod2.55" argument="0.000, 1.000, 0.000, 0.000"/>
-					<mesh name="empire_street_fountain_e.lod3.53" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
-					<mesh name="empire_street_fountain_e.lod3.55" argument="0.000, 1.000, 0.000, 0.000"/>
-				</meta_mesh_component>
-			</components>
-			<scripts>
-				<script name="AmbientSoundEmitter">
-					<variables>
-						<variable name="Overrided Max Distance" value="20.000000"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
-		<game_entity prefab="bd_shelf_hanged_e">
-			<transform position="114.480, 127.591, 8.221" rotation_euler="0.000, 0.000, 1.601"/>
-		</game_entity>
-		<game_entity prefab="empire_aqueduct">
-			<transform position="128.570, 256.563, 0.000" rotation_euler="0.002, 0.000, 0.000"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="empire_aqueduct.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
-					<mesh name="empire_aqueduct.lod2.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
-					<mesh name="empire_aqueduct.lod5.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
-					<mesh name="empire_aqueduct.lod6.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="foods_Maggots">
-			<transform position="122.900, 118.173, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_castle_barn_b_l2_door">
-			<transform position="122.110, 120.510, 5.210" rotation_euler="0.000, 0.000, 1.572"/>
-		</game_entity>
-		<game_entity prefab="foods_Maggots">
-			<transform position="122.754, 118.178, 5.210" rotation_euler="0.000, 0.000, -0.378"/>
-		</game_entity>
-		<game_entity prefab="bd_basket_aserai_a">
-			<transform position="113.079, 126.943, 5.210" rotation_euler="0.000, 0.000, -1.048"/>
-		</game_entity>
-		<game_entity prefab="empire_castle_barn_b_l2_door">
-			<transform position="129.680, 124.400, 5.210" rotation_euler="0.000, 0.000, 1.571"/>
-		</game_entity>
-		<game_entity prefab="pot_break_c">
-			<transform position="126.920, 125.723, 5.210" rotation_euler="0.000, 0.000, 0.236"/>
-		</game_entity>
-		<game_entity prefab="sp_tavern_wench">
-			<transform position="152.679, 120.388, 5.781" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_bay_window_a">
-			<transform position="124.798, 133.869, 2.372" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_tower_e2">
-			<transform position="128.170, 174.770, 13.310" rotation_euler="0.000, 0.000, -0.093" scale="1.600, 1.600, 2.100"/>
-		</game_entity>
-		<game_entity prefab="bd_wall_pouches">
-			<transform position="111.323, 120.558, 7.093" rotation_euler="0.000, 0.000, 1.613"/>
-		</game_entity>
-		<game_entity prefab="empire_castle_barn_b_l2_door">
-			<transform position="110.950, 119.370, 5.260" rotation_euler="0.000, 0.000, 1.571" scale="1.300, 1.000, 1.000"/>
-		</game_entity>
-		<game_entity prefab="SpawnPointDebugView">
-			<transform position="125.500, 89.955, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-			<scripts>
-				<script name="SpawnPointDebugView">
-					<variables>
-						<variable name="ActivateDebugUIEditor" value="true"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
 		<game_entity prefab="_barrier_passage_center">
 			<transform position="122.277, 114.873, 5.210" rotation_euler="0.000, 0.000, 1.605" scale="4.000, 4.000, 4.000"/>
-		</game_entity>
-		<game_entity prefab="sp_mercenary">
-			<transform position="152.538, 121.674, 5.780" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.750, 1.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_d_interior">
-			<transform position="118.330, 120.660, 5.210" rotation_euler="0.000, 0.000, -3.141"/>
 		</game_entity>
 		<game_entity prefab="sp_tavernkeeper">
 			<transform position="153.136, 117.116, 5.781" rotation_euler="0.000, 0.000, 1.405"/>
 		</game_entity>
-		<game_entity prefab="brushwood_f">
-			<transform position="127.084, 114.617, 5.210" rotation_euler="0.000, 0.000, -1.428"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="brushwood_f" argument="0.500, 0.000, 0.000, 0.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
 		<game_entity name="sp_npc_beggar_sitting" old_prefab_name="sp_npc_beggar_sitting" mobility="1">
 			<tags>
 				<tag name="npc_wait"/>
+				<tag name="npc_beggar"/>
 			</tags>
-			<transform position="127.576, 124.924, 5.210" rotation_euler="0.000, 0.000, -1.804"/>
+			<transform position="127.714, 121.148, 5.210" rotation_euler="0.000, 0.000, -1.804"/>
 			<scripts>
 				<script name="UsablePlace">
 					<variables>
@@ -214,22 +289,6 @@
 				</script>
 			</scripts>
 			<children>
-				<game_entity name="looking_at_beggar" old_prefab_name="looking_at_beggar" mobility="1">
-					<tags>
-						<tag name="npc_common"/>
-					</tags>
-					<transform position="1.046, -0.348, 0.000" rotation_euler="0.000, 0.000, 1.048"/>
-					<scripts>
-						<script name="UsablePlace">
-							<variables>
-								<variable name="PilotStandingPointTag" value="Pilot"/>
-								<variable name="AmmoPickUpTag" value="ammopickup"/>
-								<variable name="WaitStandingPointTag" value="Wait"/>
-								<variable name="NavMeshPrefabName" value=""/>
-							</variables>
-						</script>
-					</scripts>
-				</game_entity>
 				<game_entity name="sp_npc_beggar_sitting" old_prefab_name="sp_npc_beggar_sitting" mobility="1">
 					<tags>
 						<tag name="npc_beggar"/>
@@ -285,34 +344,130 @@
 				</game_entity>
 			</children>
 		</game_entity>
-		<game_entity prefab="brushwood_d">
-			<transform position="127.670, 116.067, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="empire_house_d_interior">
+			<transform position="118.330, 120.660, 5.210" rotation_euler="0.000, 0.000, -3.141"/>
+		</game_entity>
+		<game_entity prefab="brushwood_f">
+			<transform position="127.084, 114.617, 5.210" rotation_euler="0.000, 0.000, -1.428"/>
 			<components>
 				<meta_mesh_component>
-					<mesh name="brushwood_d" argument="0.500, 0.000, 0.000, 0.000"/>
+					<mesh name="brushwood_f" argument="0.500, 0.000, 0.000, 0.000"/>
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="bd_chair_c_left">
-			<tags/>
-			<transform position="113.564, 124.770, 5.210" rotation_euler="0.000, 0.000, 2.407"/>
+		<game_entity prefab="sp_mercenary">
+			<transform position="152.538, 121.674, 5.780" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.750, 1.000"/>
 		</game_entity>
 		<game_entity prefab="bd_chest_sturgia_d">
 			<transform position="111.652, 118.506, 5.210" rotation_euler="0.000, 0.000, -3.122"/>
 		</game_entity>
-		<game_entity prefab="brushwood_c">
-			<transform position="127.672, 115.966, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="SpawnPointDebugView">
+			<transform position="125.500, 89.955, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<scripts>
+				<script name="SpawnPointDebugView">
+					<variables>
+						<variable name="ActivateDebugUIEditor" value="true"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="sp_tavern_wench">
+			<transform position="152.679, 120.388, 5.781" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_house_tower_e2">
+			<transform position="128.170, 174.770, 13.310" rotation_euler="0.000, 0.000, -0.093" scale="1.600, 1.600, 2.100"/>
+		</game_entity>
+		<game_entity prefab="bed_straw_e">
+			<transform position="114.900, 118.157, 5.210" rotation_euler="0.000, 0.000, 3.046"/>
+		</game_entity>
+		<game_entity prefab="empire_house_bay_window_a">
+			<transform position="124.798, 133.869, 2.372" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_wall_pouches">
+			<transform position="111.323, 120.558, 7.093" rotation_euler="0.000, 0.000, 1.613"/>
+		</game_entity>
+		<game_entity prefab="empire_castle_barn_b_l2_door">
+			<transform position="110.950, 119.370, 5.260" rotation_euler="0.000, 0.000, 1.571" scale="1.300, 1.000, 1.000"/>
+		</game_entity>
+		<game_entity prefab="bd_shelf_hanged_e">
+			<transform position="114.480, 127.591, 8.221" rotation_euler="0.000, 0.000, 1.601"/>
+		</game_entity>
+		<game_entity prefab="empire_street_fountain_e">
+			<transform position="113.077, 133.366, 0.167" rotation_euler="0.000, 0.000, 0.000"/>
 			<components>
 				<meta_mesh_component>
-					<mesh name="brushwood_c" argument="0.500, 0.000, 0.000, 0.000"/>
+					<mesh name="empire_street_fountain_e.53" argument="1.000, 0.100, 1.270, 0.000" argument2="0.990, 0.170, 0.004, 0.500"/>
+					<mesh name="empire_street_fountain_e.55" argument="0.000, 1.000, 0.000, 0.000"/>
+					<mesh name="empire_street_fountain_e.lod2.53" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
+					<mesh name="empire_street_fountain_e.lod2.55" argument="0.000, 1.000, 0.000, 0.000"/>
+					<mesh name="empire_street_fountain_e.lod3.53" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
+					<mesh name="empire_street_fountain_e.lod3.55" argument="0.000, 1.000, 0.000, 0.000"/>
 				</meta_mesh_component>
 			</components>
+			<scripts>
+				<script name="AmbientSoundEmitter">
+					<variables>
+						<variable name="Overrided Max Distance" value="20.000000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="94.544, 116.982, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="foods_Maggots">
+			<transform position="122.296, 118.102, 5.210" rotation_euler="0.000, 0.000, 0.687"/>
+		</game_entity>
+		<game_entity prefab="foods_Maggots">
+			<transform position="122.900, 118.173, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="empire_aqueduct">
+			<transform position="128.570, 256.563, 0.000" rotation_euler="0.002, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="empire_aqueduct.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
+					<mesh name="empire_aqueduct.lod2.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
+					<mesh name="empire_aqueduct.lod5.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
+					<mesh name="empire_aqueduct.lod6.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="bd_chair_b_01">
+			<tags>
+				<tag name="npc_wait"/>
+				<tag name="npc_common"/>
+				<tag name="gambler_npc"/>
+			</tags>
+			<transform position="153.174, 115.747, 5.781" rotation_euler="0.000, 0.000, -1.352"/>
+		</game_entity>
+		<game_entity prefab="shop_sign__g">
+			<transform position="119.461, 133.850, 4.044" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_b">
+			<transform position="112.401, 124.219, 6.006" rotation_euler="0.000, 0.000, -1.072"/>
+		</game_entity>
+		<game_entity prefab="brushwood_a">
+			<transform position="127.426, 114.454, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="brushwood_a" argument="0.500, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="bd_basket_aserai_c">
+			<transform position="115.832, 127.152, 5.210" rotation_euler="0.000, 0.000, -0.157"/>
+		</game_entity>
+		<game_entity prefab="empire_road_floor_a_small">
+			<transform position="94.508, 123.870, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="kitchen_mug_b">
+			<transform position="112.405, 124.584, 6.005" rotation_euler="0.000, 0.000, -0.869"/>
 		</game_entity>
 		<game_entity prefab="empire_road_floor_a_small">
 			<transform position="113.425, 130.214, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="roman_houses_c">
-			<transform position="139.710, 115.150, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
+		<game_entity prefab="pot_break_b">
+			<transform position="125.549, 125.728, 5.311" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
 			<visibility_masks>
@@ -332,11 +487,11 @@
 				</script>
 			</scripts>
 		</game_entity>
-		<game_entity prefab="pottery_c6">
-			<transform position="111.803, 119.773, 5.210" rotation_euler="0.000, 0.000, 2.728"/>
+		<game_entity prefab="arabian_platform_wooden_c">
+			<transform position="119.890, 119.670, 9.910" rotation_euler="0.000, 0.000, 0.000" scale="13.400, 5.000, 1.000"/>
 		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="94.508, 123.870, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="bd_rope_b">
+			<transform position="111.794, 121.724, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="empire_house_b">
 			<transform position="117.443, 139.430, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
@@ -345,11 +500,11 @@
 				<game_entity visible="true" _index_="1"/>
 			</children>
 		</game_entity>
-		<game_entity prefab="torch_wall_d">
-			<transform position="128.519, 116.722, 7.463" rotation_euler="0.000, 0.000, -1.808"/>
+		<game_entity prefab="empire_house_bridge_e">
+			<transform position="113.888, 124.141, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="kitchen_bowl_b">
-			<transform position="112.401, 124.219, 6.006" rotation_euler="0.000, 0.000, -1.072"/>
+		<game_entity prefab="roman_houses_c">
+			<transform position="139.710, 115.150, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
 		</game_entity>
 		<game_entity prefab="empire_gatehouse_a">
 			<transform position="172.136, 205.176, 0.000" rotation_euler="0.000, 0.000, 2.659"/>
@@ -366,82 +521,11 @@
 				</game_entity>
 			</children>
 		</game_entity>
-		<game_entity prefab="kitchen_mug_b">
-			<transform position="112.405, 124.584, 6.005" rotation_euler="0.000, 0.000, -0.869"/>
-		</game_entity>
-		<game_entity prefab="pot_break_b">
-			<transform position="125.549, 125.728, 5.311" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="arabian_platform_wooden_c">
-			<transform position="119.890, 119.670, 9.910" rotation_euler="0.000, 0.000, 0.000" scale="13.400, 5.000, 1.000"/>
-		</game_entity>
-		<game_entity prefab="bd_rope_b">
-			<transform position="111.794, 121.724, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="127.226, 130.201, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_bridge_e">
-			<transform position="119.089, 119.070, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_bridge_e">
-			<transform position="119.143, 124.127, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="torch_candle_c_fire">
-			<transform position="112.339, 123.548, 6.008" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_bridge_e">
-			<transform position="113.962, 119.129, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_castle_barn_b_l2_door">
-			<transform position="129.680, 119.950, 5.320" rotation_euler="0.000, 0.000, 1.571"/>
-		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="120.302, 130.232, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_b">
-			<transform position="126.300, 139.430, 0.000" rotation_euler="0.000, 0.000, 3.141"/>
-			<children>
-				<game_entity visible="true" _index_="0"/>
-				<game_entity visible="true" _index_="1"/>
-			</children>
-		</game_entity>
-		<game_entity prefab="mat_carpet_i">
-			<transform position="113.872, 122.746, 5.210" rotation_euler="0.000, 0.000, -1.593"/>
-		</game_entity>
-		<game_entity prefab="bd_pillow_g">
-			<transform position="116.017, 119.430, 5.210" rotation_euler="0.000, 0.000, -1.827"/>
-		</game_entity>
-		<game_entity prefab="bd_cloth_wall_c">
-			<transform position="116.597, 123.459, 7.372" rotation_euler="0.000, 0.000, 1.691"/>
-		</game_entity>
-		<game_entity prefab="bd_mortar_and_pestle">
-			<transform position="115.388, 127.219, 6.798" rotation_euler="0.000, 0.000, -1.351"/>
-		</game_entity>
-		<game_entity prefab="empire_hippodrome_enterance_wall_b2">
-			<transform position="119.430, 122.420, 5.310" rotation_euler="0.000, 0.000, 0.000" scale="1.090, 1.000, 1.400"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="empire_hippodrome_enterance_wall_b2.2" material="roman_hippodrome_wall_plaster"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="empire_hippodrome_enterance_wall_b2">
-			<transform position="121.760, 119.830, 5.410" rotation_euler="0.000, 0.000, 1.571" scale="1.000, 1.000, 1.300"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="empire_hippodrome_enterance_wall_b2.2" material="roman_hippodrome_wall_plaster"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="empire_road_plaza_a">
-			<transform position="140.996, 130.258, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="bd_sack_c">
-			<transform position="116.101, 123.405, 5.210" rotation_euler="0.000, 0.000, -1.480"/>
+		<game_entity prefab="pottery_c6">
+			<transform position="111.803, 119.773, 5.210" rotation_euler="0.000, 0.000, 2.728"/>
 		</game_entity>
 		<game_entity prefab="empire_aqueduct">
-			<transform position="38.996, 256.705, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<transform position="218.033, 256.584, 0.000" rotation_euler="0.002, 0.000, 0.000"/>
 			<components>
 				<meta_mesh_component>
 					<mesh name="empire_aqueduct.5" argument="40.000, 0.100, 0.000, 0.000" argument2="4.520, 2.000, 0.100, 0.500"/>
@@ -451,132 +535,71 @@
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="bd_table_e">
-			<transform position="112.174, 124.205, 5.210" rotation_euler="0.000, 0.000, -1.596"/>
-		</game_entity>
-		<game_entity prefab="empire_grandbazaar_wall">
-			<transform position="111.100, 121.010, 4.980" rotation_euler="0.000, 0.000, 0.000" scale="1.000, 1.496, 1.000"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="empire_grandbazaar_wall.6" material="roman_hippodrome_wall_plaster"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="141.154, 150.898, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="roman_house_big_a">
-			<transform position="167.587, 125.775, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="armor_merchant_shoe_c">
-			<transform position="111.800, 117.470, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_house_fake_d">
-			<transform position="121.835, 166.422, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="torch_wall_d">
-			<transform position="119.513, 127.584, 7.433" rotation_euler="0.000, 0.000, 0.050"/>
-		</game_entity>
-		<game_entity prefab="pot_break_a">
-			<transform position="122.677, 121.348, 5.210" rotation_euler="0.000, 0.000, 1.109"/>
-		</game_entity>
-		<game_entity prefab="empire_grandbazaar_corner">
-			<transform position="141.274, 137.243, 0.145" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="141.127, 144.081, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="_to_carry_bed_convolute_g">
-			<transform position="111.975, 124.636, 6.007" rotation_euler="-0.216, 0.092, -0.211" scale="0.600, 0.600, 0.600"/>
-		</game_entity>
-		<game_entity prefab="empire_house_shrine_a">
-			<transform position="95.726, 163.365, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="1.500, 1.500, 1.700"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_c_left_unsittable">
-			<transform position="112.161, 122.977, 5.210" rotation_euler="0.000, 0.000, -2.810"/>
-		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="86.067, 130.276, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="106.592, 130.208, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="empire_house_a">
+			<transform position="105.585, 136.943, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity visible="true" _index_="0"/>
+				<game_entity visible="true" _index_="1"/>
+			</children>
 		</game_entity>
 		<game_entity prefab="foods_Maggots">
-			<transform position="122.490, 117.840, 5.210" rotation_euler="0.000, 0.000, -0.324"/>
+			<transform position="122.754, 118.178, 5.210" rotation_euler="0.000, 0.000, -0.378"/>
 		</game_entity>
-		<game_entity prefab="foods_Maggots">
-			<transform position="122.726, 118.348, 5.210" rotation_euler="0.000, 0.000, -0.378"/>
+		<game_entity prefab="bd_basket_aserai_a">
+			<transform position="113.079, 126.943, 5.210" rotation_euler="0.000, 0.000, -1.048"/>
 		</game_entity>
-		<game_entity prefab="armor_merchant_clothes_d">
-			<transform position="116.096, 120.181, 5.210" rotation_euler="0.000, 0.000, -1.675"/>
+		<game_entity prefab="empire_castle_barn_b_l2_door">
+			<transform position="129.680, 124.400, 5.210" rotation_euler="0.000, 0.000, 1.571"/>
 		</game_entity>
-		<game_entity name="ground_plane" old_prefab_name="">
-			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
-			<physics shape="bo_editor_plane"/>
-			<components>
-				<meta_mesh_component name="editor_plane_low">
-					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
-				</meta_mesh_component>
-			</components>
+		<game_entity prefab="empire_castle_barn_b_l2_door">
+			<transform position="122.110, 120.510, 5.210" rotation_euler="0.000, 0.000, 1.572"/>
 		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="92.984, 130.226, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="pot_break_c">
+			<transform position="126.920, 125.723, 5.210" rotation_euler="0.000, 0.000, 0.236"/>
 		</game_entity>
-		<game_entity prefab="empire_road_floor_a_small">
-			<transform position="99.798, 130.205, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="arabian_platform_wooden_c">
-			<transform position="133.380, 122.850, 5.310" rotation_euler="-0.016, 1.596, 0.068" scale="4.800, 2.600, 0.900"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_c_right">
-			<tags>
-				<tag name="npc_wait"/>
-			</tags>
-			<transform position="122.624, 118.125, 5.210" rotation_euler="0.000, 0.000, -1.619"/>
-		</game_entity>
-		<game_entity prefab="bd_wood_heap_e">
-			<transform position="127.824, 113.929, 5.210" rotation_euler="0.000, 0.000, 0.074"/>
-		</game_entity>
-		<game_entity prefab="sp_thug">
-			<tags>
-				<tag name="sp_thug"/>
-				<tag name="npc_wait"/>
-			</tags>
-			<transform position="128.909, 118.413, 5.210" rotation_euler="0.000, 0.000, 1.129" scale="0.750, 0.750, 1.000"/>
-		</game_entity>
-		<game_entity prefab="floor_dirt_b">
-			<transform position="123.851, 119.014, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="floor_dirt_c">
-			<transform position="123.607, 113.306, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="roman_houses_b">
-			<transform position="94.398, 138.773, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="kitchen_bowl_b_two">
-			<transform position="113.619, 127.231, 6.781" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity name="empire_statue_bust_place_a" old_prefab_name="">
-			<transform position="125.445, 125.888, 5.210" rotation_euler="0.000, 0.000, 0.000"/>
-			<physics shape="bo_empire_statue_bust_place_a" override_material="stone"/>
-			<components>
-				<meta_mesh_component name="empire_statue_bust_place_a"/>
-			</components>
-		</game_entity>
-		<game_entity prefab="bd_flask_sturgia_b">
-			<transform position="114.307, 127.225, 6.782" rotation_euler="0.000, 0.000, -0.876"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="bd_flask_sturgia_b.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod1.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod2.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod3.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod4.10" argument="1.000, 0.010, 0.010, 1.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="sp_player">
-			<transform position="123.061, 114.972, 5.210" rotation_euler="0.000, 0.000, -1.565"/>
+		<game_entity prefab="sp_npc_argument_trio">
+			<transform position="128.532, 117.825, 5.210" rotation_euler="0.000, 0.000, 1.973"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{EAE7108C-6506-4112-BCB6-0A991AB3F549}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{EAE7108C-6506-4112-BCB6-0A991AB3F549}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+				<game_entity _index_="2">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{B42B83C5-8703-4F82-8CBF-C5907957EE2C}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
 		</game_entity>
 	</entities>
 	<terrain enabled="true" node_dimension_x="4" node_dimension_y="4" node_size="100.000" lod_multiplier="1.000" min_height="-100.000" max_height="500.000" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="0" ao_intensity="4.000">
@@ -1031,7 +1054,7 @@
 			</node>
 		</nodes>
 	</terrain>
-	<editor_data editor_camera_position="123.019, 121.885, 8.384" editor_camera_elevation="-0.143" editor_camera_bearing="6.126" editor_camera_forward="0.264, -0.953, -0.147" author="" comment=""/>
+	<editor_data editor_camera_position="140.306, 135.092, 13.546" editor_camera_elevation="-0.166" editor_camera_bearing="0.154" editor_camera_forward="-0.778, -0.540, -0.322" author="" comment=""/>
 	<camera_data near_plane="0.100" far_plane="100000.000"/>
 	<Paths/>
 </scene>

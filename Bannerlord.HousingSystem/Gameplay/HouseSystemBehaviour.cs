@@ -61,7 +61,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
     private void AddMenus(CampaignGameStarter starter)
     {
         starter.AddGameMenuOption("town", "town_housing", "{=!}Houses", CanOpenHousingMenu,
-            (args) => OnOpenHousingMenuConsequence(args, starter));
+            (args) => OnOpenHousingMenuConsequence(args, starter), false, 3);
 
         Dictionary<string, HouseConfig[]> configs = _housingManager.Config;
         
@@ -112,6 +112,7 @@ public class HouseSystemBehaviour : CampaignBehaviorBase
 
     private bool CanOpenHousingMenu(MenuCallbackArgs args)
     {
+        args.optionLeaveType = GameMenuOption.LeaveType.Manage;
         return CanAccess();
     }
 

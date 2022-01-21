@@ -1,6 +1,5 @@
 92
 mesh animation_stand_arrow_blue
-mesh animation_stand_arrow_green
 mesh editor_plane_low
 mesh empire_statue_bust_place_a
 prefab SpawnPointDebugView
@@ -75,10 +74,11 @@ prefab scene: empire_house_b_interior
 prefab shop_sign__g
 prefab shop_sign_merchantpottery
 prefab sp_mercenary
+prefab sp_npc_argument_trio
+prefab sp_npc_wait
 prefab sp_player
 prefab sp_tavern_wench
 prefab sp_tavernkeeper
-prefab sp_thug
 prefab torch_candle_c_fire
 prefab torch_wall_d
 texture cg_50c_5b
