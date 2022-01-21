@@ -8,7 +8,6 @@ flora_entity ground_rock
 mesh animation_stand_cage_blue
 mesh arabian_house_new_a_interior_c
 mesh editor_plane_low
-mesh torch_candle_b
 prefab SpawnPointDebugView
 prefab _barrier_passage_center
 prefab _plane_8x8
@@ -129,6 +128,7 @@ prefab kitchen_sausage_a
 prefab kitchen_sausage_b
 prefab log_bench_beech_c_unsittable
 prefab looking_at_beggar
+prefab market_ambient_sound
 prefab market_apple_crate
 prefab market_breadPile
 prefab market_brooms

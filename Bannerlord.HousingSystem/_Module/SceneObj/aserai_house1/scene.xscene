@@ -41,159 +41,6 @@
 		</out_of_bounds_effects_properties>
 	</environment_properties>
 	<entities>
-		<game_entity prefab="aserai_dungeon_door_a_opened">
-			<transform position="159.792, 136.128, 8.844" rotation_euler="0.000, 0.000, -1.559" scale="1.036, 1.000, 1.063"/>
-		</game_entity>
-		<game_entity prefab="torch_wall_d">
-			<transform position="147.135, 140.036, 6.443" rotation_euler="0.000, 0.000, -0.066"/>
-		</game_entity>
-		<game_entity prefab="torch_candle_c_fire">
-			<transform position="148.423, 141.790, 0.796" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_merchant_notary_talking_set">
-			<transform position="131.332, 134.915, 0.000" rotation_euler="0.000, 0.000, 0.574"/>
-			<children>
-				<game_entity _index_="0">
-					<children>
-						<game_entity _index_="0">
-							<scripts>
-								<script name="AnimationPoint">
-									<variables>
-										<variable name="PairEntity" value="{7BB3E93E-E5D1-4946-B2EE-83788C581BBD}"/>
-									</variables>
-								</script>
-							</scripts>
-						</game_entity>
-					</children>
-				</game_entity>
-				<game_entity _index_="1">
-					<children>
-						<game_entity _index_="0">
-							<scripts>
-								<script name="AnimationPoint">
-									<variables>
-										<variable name="PairEntity" value="{DDEE3D20-70FB-4FB9-A123-B648C4FC324F}"/>
-									</variables>
-								</script>
-							</scripts>
-						</game_entity>
-					</children>
-				</game_entity>
-			</children>
-		</game_entity>
-		<game_entity prefab="shop_prop_merchantarmory_light_c">
-			<transform position="131.897, 148.048, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="empire_endtable_a">
-			<transform position="165.818, 136.262, 8.843" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_c_right">
-			<tags/>
-			<transform position="165.958, 134.753, 8.843" rotation_euler="0.000, 0.000, 0.116"/>
-		</game_entity>
-		<game_entity prefab="bd_cupboard_khuzait_lord_b">
-			<transform position="153.587, 142.236, 0.000" rotation_euler="0.000, 0.000, -1.559"/>
-		</game_entity>
-		<game_entity prefab="arabian_house_fake_a">
-			<transform position="116.609, 118.670, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="arabian_house_new_a">
-			<transform position="122.436, 159.900, 0.000" rotation_euler="0.000, 0.000, -1.628"/>
-		</game_entity>
-		<game_entity prefab="arabian_house_new_b">
-			<transform position="142.925, 166.088, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="arena_arabian_wall_a">
-			<transform position="172.310, 131.540, 0.000" rotation_euler="0.000, 0.000, -1.549" scale="3.300, 1.000, 3.100"/>
-		</game_entity>
-		<game_entity prefab="empire_street_tent_01">
-			<transform position="139.333, 151.322, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="_to_carry_bed_convolute_g">
-			<transform position="167.126, 133.357, 8.841" rotation_euler="0.055, 0.176, -0.109" scale="0.600, 0.600, 0.600"/>
-		</game_entity>
-		<game_entity prefab="sp_player">
-			<transform position="146.761, 138.687, 0.000" rotation_euler="0.000, 0.000, -1.560"/>
-		</game_entity>
-		<game_entity prefab="torch_candle_c_fire">
-			<transform position="160.438, 134.348, 9.575" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="vlandia_chest_a">
-			<transform position="160.479, 133.947, 8.843" rotation_euler="0.000, 0.000, 1.574" scale="0.700, 0.900, 1.000"/>
-		</game_entity>
-		<game_entity prefab="bd_table_e">
-			<transform position="152.446, 136.201, 0.013" rotation_euler="0.000, 0.000, -0.050"/>
-		</game_entity>
-		<game_entity prefab="bd_aserai_seat_a_unsittable">
-			<transform position="147.954, 143.664, 0.000" rotation_euler="0.000, 0.000, 0.095"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_c_left">
-			<transform position="149.256, 141.073, 0.000" rotation_euler="0.000, 0.000, 1.548"/>
-		</game_entity>
-		<game_entity prefab="kitchen_bowl_b_four">
-			<transform position="160.484, 133.692, 9.575" rotation_euler="0.000, 0.000, -0.416"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_c_right_unsittable">
-			<transform position="166.615, 136.694, 8.843" rotation_euler="0.000, 0.000, 2.083"/>
-		</game_entity>
-		<game_entity prefab="shop_prop_merchantwinery_f">
-			<transform position="152.698, 145.696, 1.818" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_c_right_unsittable">
-			<transform position="165.294, 137.031, 8.843" rotation_euler="0.000, 0.000, -2.683"/>
-		</game_entity>
-		<game_entity prefab="arena_arabian_wall_a">
-			<transform position="151.652, 133.974, 8.843" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="shop_prop_merchantwinery_e">
-			<transform position="167.500, 132.458, 10.692" rotation_euler="0.000, 0.000, -1.470"/>
-		</game_entity>
-		<game_entity name="empty_object" old_prefab_name="">
-			<transform position="161.592, 99.712, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="shop_prop_merchantwinery_d">
-			<transform position="148.280, 145.553, 1.508" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="torch_table_a_fire">
-			<transform position="153.635, 142.202, 0.799" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="mead_cup_wooden_c">
-			<transform position="165.976, 136.088, 9.894" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_npc_argue_set">
-			<transform position="116.401, 140.350, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-			<children>
-				<game_entity _index_="0">
-					<children>
-						<game_entity _index_="0">
-							<scripts>
-								<script name="AnimationPoint">
-									<variables>
-										<variable name="PairEntity" value="{95EBD191-E2F1-411A-80D0-ACE522096771}"/>
-									</variables>
-								</script>
-							</scripts>
-						</game_entity>
-					</children>
-				</game_entity>
-				<game_entity _index_="1">
-					<children>
-						<game_entity _index_="0">
-							<scripts>
-								<script name="AnimationPoint">
-									<variables>
-										<variable name="PairEntity" value="{93AC5530-A0CD-44A1-B400-3CD31CF78912}"/>
-									</variables>
-								</script>
-							</scripts>
-						</game_entity>
-					</children>
-				</game_entity>
-			</children>
-		</game_entity>
-		<game_entity prefab="market_potteryPile3">
-			<transform position="113.366, 140.393, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
 		<game_entity prefab="tavernkeeper_knife">
 			<transform position="153.442, 144.257, 1.150" rotation_euler="-1.528, -0.799, -2.496"/>
 		</game_entity>
@@ -267,6 +114,159 @@
 					</children>
 				</game_entity>
 			</children>
+		</game_entity>
+		<game_entity prefab="aserai_dungeon_door_a_opened">
+			<transform position="159.792, 136.128, 8.844" rotation_euler="0.000, 0.000, -1.559" scale="1.036, 1.000, 1.063"/>
+		</game_entity>
+		<game_entity prefab="torch_wall_d">
+			<transform position="147.135, 140.036, 6.443" rotation_euler="0.000, 0.000, -0.066"/>
+		</game_entity>
+		<game_entity prefab="torch_candle_c_fire">
+			<transform position="148.423, 141.790, 0.796" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity name="empty_object" old_prefab_name="">
+			<transform position="161.592, 99.712, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantwinery_e">
+			<transform position="167.500, 132.458, 10.692" rotation_euler="0.000, 0.000, -1.470"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_right_unsittable">
+			<transform position="166.615, 136.694, 8.843" rotation_euler="0.000, 0.000, 2.083"/>
+		</game_entity>
+		<game_entity prefab="torch_table_a_fire">
+			<transform position="153.635, 142.202, 0.799" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantwinery_d">
+			<transform position="148.280, 145.553, 1.508" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantwinery_f">
+			<transform position="152.698, 145.696, 1.818" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_right_unsittable">
+			<transform position="165.294, 137.031, 8.843" rotation_euler="0.000, 0.000, -2.683"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="151.652, 133.974, 8.843" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="mead_cup_wooden_c">
+			<transform position="165.976, 136.088, 9.894" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="sp_npc_argue_set">
+			<transform position="116.401, 140.350, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{95EBD191-E2F1-411A-80D0-ACE522096771}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{93AC5530-A0CD-44A1-B400-3CD31CF78912}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="market_potteryPile3">
+			<transform position="113.366, 140.393, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="torch_candle_c_fire">
+			<transform position="160.438, 134.348, 9.575" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="sp_player">
+			<transform position="146.761, 138.687, 0.000" rotation_euler="0.000, 0.000, -1.560"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_right">
+			<tags/>
+			<transform position="165.958, 134.753, 8.843" rotation_euler="0.000, 0.000, 0.116"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_b_four">
+			<transform position="160.484, 133.692, 9.575" rotation_euler="0.000, 0.000, -0.416"/>
+		</game_entity>
+		<game_entity prefab="bd_cupboard_khuzait_lord_b">
+			<transform position="153.587, 142.236, 0.000" rotation_euler="0.000, 0.000, -1.559"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_b">
+			<transform position="142.925, 166.088, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_aserai_seat_a_unsittable">
+			<transform position="147.954, 143.664, 0.000" rotation_euler="0.000, 0.000, 0.095"/>
+		</game_entity>
+		<game_entity prefab="empire_endtable_a">
+			<transform position="165.818, 136.262, 8.843" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="sp_merchant_notary_talking_set">
+			<transform position="131.332, 134.915, 0.000" rotation_euler="0.000, 0.000, 0.574"/>
+			<children>
+				<game_entity _index_="0">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{7BB3E93E-E5D1-4946-B2EE-83788C581BBD}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AnimationPoint">
+									<variables>
+										<variable name="PairEntity" value="{DDEE3D20-70FB-4FB9-A123-B648C4FC324F}"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="arabian_house_fake_a">
+			<transform position="116.609, 118.670, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_table_e">
+			<transform position="152.446, 136.201, 0.013" rotation_euler="0.000, 0.000, -0.050"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_c_left">
+			<transform position="149.256, 141.073, 0.000" rotation_euler="0.000, 0.000, 1.548"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantarmory_light_c">
+			<transform position="131.897, 148.048, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_a">
+			<transform position="160.479, 133.947, 8.843" rotation_euler="0.000, 0.000, 1.574" scale="0.700, 0.900, 1.000"/>
+		</game_entity>
+		<game_entity prefab="_to_carry_bed_convolute_g">
+			<transform position="167.126, 133.357, 8.841" rotation_euler="0.055, 0.176, -0.109" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="arabian_house_new_a">
+			<transform position="122.436, 159.900, 0.000" rotation_euler="0.000, 0.000, -1.628"/>
+		</game_entity>
+		<game_entity prefab="empire_street_tent_01">
+			<transform position="139.333, 151.322, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="172.310, 131.540, 0.000" rotation_euler="0.000, 0.000, -1.549" scale="3.300, 1.000, 3.100"/>
 		</game_entity>
 		<game_entity prefab="mead_cup_wooden_c">
 			<transform position="148.478, 140.401, 0.798" rotation_euler="0.000, 0.000, 0.000"/>
@@ -386,44 +386,8 @@
 		<game_entity prefab="sp_guard">
 			<transform position="125.000, 148.107, 0.365" rotation_euler="0.000, 0.000, -2.804"/>
 		</game_entity>
-		<game_entity prefab="arena_arabian_wall_a">
-			<transform position="168.034, 134.054, 12.458" rotation_euler="0.000, 0.000, -1.565" scale="0.960, 1.000, 1.000"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="arena_arabian_wall_a.11" material="adobe_wall_1"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="tavern_aserai_stove_a">
-			<transform position="154.130, 140.220, 0.000" rotation_euler="0.000, 0.000, -1.563"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="tavern_aserai_stove_a.2" material="adobe_wall_1"/>
-					<mesh name="tavern_aserai_stove_a.lod3.1" material="adobe_wall_1"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="_barrier_passage_center">
-			<transform position="145.412, 138.821, 0.000" rotation_euler="0.000, 0.000, 1.562" scale="4.000, 4.000, 4.000"/>
-		</game_entity>
-		<game_entity prefab="sp_merchant_working">
-			<transform position="124.247, 136.093, 0.000" rotation_euler="0.000, 0.000, -0.648"/>
-		</game_entity>
-		<game_entity prefab="SpawnPointDebugView">
-			<transform position="151.047, 150.694, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-			<scripts>
-				<script name="SpawnPointDebugView">
-					<variables>
-						<variable name="ActivateDebugUIEditor" value="true"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
-		<game_entity prefab="sp_mercenary">
-			<transform position="152.822, 142.492, 0.000" rotation_euler="0.000, 0.000, 0.430" scale="0.750, 0.750, 1.000"/>
-		</game_entity>
-		<game_entity prefab="merchant_stand_market">
-			<transform position="115.732, 135.487, 0.000" rotation_euler="0.000, 0.000, -1.489"/>
+		<game_entity prefab="torch_candle_b_fire">
+			<transform position="151.392, 143.829, 1.150" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="sp_npc_lean_back_hands">
 			<transform position="149.963, 139.798, 4.106" rotation_euler="0.000, 0.000, 3.120"/>
@@ -498,7 +462,7 @@
 			<transform position="107.799, 146.447, 1.824" rotation_euler="0.000, 0.000, 1.492"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, 1.194, 3.141"/>
+					<transform rotation_euler="1.128, -2.171, 3.141"/>
 				</game_entity>
 			</children>
 		</game_entity>
@@ -515,18 +479,18 @@
 			<transform position="107.477, 141.854, 1.960" rotation_euler="0.000, 0.000, 1.492"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, 0.729, 3.141"/>
+					<transform rotation_euler="1.128, -2.636, 3.141"/>
 				</game_entity>
 			</children>
 		</game_entity>
 		<game_entity prefab="sp_guard">
 			<transform position="109.667, 145.994, 0.000" rotation_euler="0.000, 0.000, -2.171"/>
 		</game_entity>
-		<game_entity prefab="shop_prop_merchantwinery_b">
-			<transform position="131.149, 120.202, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
 		<game_entity prefab="shop_prop_merchantweavery_wool_b">
 			<transform position="138.946, 131.091, 0.000" rotation_euler="0.000, 0.000, -0.850"/>
+		</game_entity>
+		<game_entity prefab="shop_prop_merchantwinery_b">
+			<transform position="131.149, 120.202, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="shop_prop_merchantweavery_wool_c">
 			<transform position="137.385, 132.441, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
@@ -558,7 +522,7 @@
 			<transform position="122.256, 150.836, 1.949" rotation_euler="0.000, 0.000, 1.427"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, -1.316, 3.141"/>
+					<transform rotation_euler="1.128, 1.602, 3.141"/>
 				</game_entity>
 			</children>
 		</game_entity>
@@ -641,8 +605,55 @@
 				</script>
 			</scripts>
 		</game_entity>
-		<game_entity prefab="torch_candle_b_fire">
-			<transform position="151.392, 143.829, 1.150" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="merchant_stand_market">
+			<transform position="115.732, 135.487, 0.000" rotation_euler="0.000, 0.000, -1.489"/>
+		</game_entity>
+		<game_entity prefab="SpawnPointDebugView">
+			<transform position="151.047, 150.694, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<scripts>
+				<script name="SpawnPointDebugView">
+					<variables>
+						<variable name="ActivateDebugUIEditor" value="true"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="sp_mercenary">
+			<transform position="152.822, 142.492, 0.000" rotation_euler="0.000, 0.000, 0.430" scale="0.750, 0.750, 1.000"/>
+		</game_entity>
+		<game_entity prefab="tavern_aserai_stove_a">
+			<transform position="154.130, 140.220, 0.000" rotation_euler="0.000, 0.000, -1.563"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="tavern_aserai_stove_a.2" material="adobe_wall_1"/>
+					<mesh name="tavern_aserai_stove_a.lod3.1" material="adobe_wall_1"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="arena_arabian_wall_a">
+			<transform position="168.034, 134.054, 12.458" rotation_euler="0.000, 0.000, -1.565" scale="0.960, 1.000, 1.000"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="arena_arabian_wall_a.11" material="adobe_wall_1"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="_barrier_passage_center">
+			<transform position="145.412, 138.821, 0.000" rotation_euler="0.000, 0.000, 1.562" scale="4.000, 4.000, 4.000"/>
+		</game_entity>
+		<game_entity prefab="sp_merchant_working">
+			<transform position="124.247, 136.093, 0.000" rotation_euler="0.000, 0.000, -0.648"/>
+		</game_entity>
+		<game_entity prefab="market_ambient_sound">
+			<transform position="126.311, 139.490, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="10.000, 10.000, 10.000"/>
+			<scripts>
+				<script name="AmbientSoundEmitter">
+					<variables>
+						<variable name="Overrided Max Distance" value="20.000000"/>
+						<variable name="Overrided Min Distance" value="1.000000"/>
+					</variables>
+				</script>
+			</scripts>
 		</game_entity>
 	</entities>
 	<terrain enabled="true" node_dimension_x="3" node_dimension_y="3" node_size="100.000" lod_multiplier="1.000" min_height="-100.000" max_height="500.000" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="0" ao_intensity="4.000">
@@ -953,7 +964,7 @@
 			</node>
 		</nodes>
 	</terrain>
-	<editor_data editor_camera_position="166.617, 133.022, 11.738" editor_camera_elevation="-0.055" editor_camera_bearing="-24.640" editor_camera_forward="-0.932, 0.350, -0.091" author="" comment=""/>
+	<editor_data editor_camera_position="150.620, 141.541, 3.401" editor_camera_elevation="-0.538" editor_camera_bearing="8.354" editor_camera_forward="-0.569, -0.629, -0.530" author="" comment=""/>
 	<camera_data near_plane="0.100" far_plane="100000.000"/>
 	<Paths/>
 </scene>

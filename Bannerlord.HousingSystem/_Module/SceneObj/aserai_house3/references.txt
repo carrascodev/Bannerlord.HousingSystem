@@ -1,4 +1,4 @@
-182
+222
 flora_entity flora_tree_date_palm_e
 flora_entity flora_tree_date_palm_f
 flora_entity flora_tree_date_palm_g
@@ -6,9 +6,15 @@ flora_entity plant_desert_bush_a
 flora_entity plant_desert_bush_c
 flora_entity plant_desert_bush_d
 flora_entity tree_high_v_palm_date_f
-mesh animation_stand_arrow_blue
-mesh bd_chair_b
+mesh aserai_castle_gate_outer_l1_plank
+mesh aserai_castle_gate_outer_l1_state1
+mesh aserai_castle_gate_outer_l1_state2
+mesh aserai_castle_gate_outer_l1_state3
+mesh aserai_castle_gate_outer_l1_state4
+mesh aserai_castle_gate_outer_l1_state5
+mesh debug_lod_mesh
 mesh editor_plane_low
+mesh icon_man
 mesh mat_carpet_i
 prefab Sp_tavern_wench_customer_interaction
 prefab SpawnPointDebugView
@@ -20,18 +26,30 @@ prefab _to_carry_kitchen_pot_c
 prefab animation_point
 prefab arabian_carpet_d
 prefab arabian_castle_house_new_a
+prefab arabian_gatehouse_a
+prefab arabian_house_new_b
+prefab arabian_house_new_c
 prefab arabian_house_new_c_interior_b
+prefab arabian_house_new_d
+prefab arabian_house_new_e
 prefab arabian_waterwell_a
 prefab armor_merchant_clothes_b
 prefab armor_merchant_clothes_f
 prefab armor_merchant_helmet_b
 prefab armor_merchant_shoe_b
+prefab aserai_castle_gate_outer_l1
+prefab aserai_castle_keep_a_l3
+prefab aserai_castle_tower_round_a_l1
+prefab aserai_castle_tower_round_a_l1_stairs
 prefab aserai_castle_tower_round_a_l2
 prefab aserai_castle_tower_round_a_l2_stairs
+prefab aserai_castle_wall_d_l3
 prefab aserai_grandbazaar_wall
 prefab aserai_shields_f
+prefab aserai_village_house_a
 prefab aserai_village_house_b
 prefab aserai_village_house_c
+prefab battering_ram_rest_point
 prefab bd_aserai_plate_cupper
 prefab bd_aserai_pot_cupper_b
 prefab bd_aserai_seat_a
@@ -72,7 +90,14 @@ prefab chair_sit_position_front_left
 prefab chair_sit_position_front_right
 prefab chair_sit_position_left
 prefab chair_sit_position_right
+prefab clean
+prefab close_inside
+prefab close_outside
 prefab cloth_flag_b
+prefab collider_agent_l
+prefab collider_agent_r
+prefab collider_l
+prefab collider_r
 prefab debris_holder
 prefab desert_border_b
 prefab desert_border_c
@@ -80,6 +105,8 @@ prefab empire_endtable_a
 prefab empire_statue_horse
 prefab empire_street_pottery_02
 prefab empire_street_pottery_12
+prefab extra_collider_l
+prefab extra_collider_r
 prefab fire_stones_desert
 prefab flagpole_a
 prefab flame_loop
@@ -90,6 +117,7 @@ prefab foods_melon_b
 prefab foods_melon_b_piece
 prefab foods_watermelon_b
 prefab foods_watermelon_b_piece
+prefab gate_plank
 prefab kitchen_basket_a
 prefab kitchen_basket_b
 prefab kitchen_basket_grape
@@ -142,6 +170,9 @@ prefab merlon_6
 prefab merlon_7
 prefab merlon_8
 prefab merlon_9
+prefab middle_position
+prefab open_inside
+prefab particles
 prefab passage_use_point
 prefab pottery_b2
 prefab prop_merchantbeer_b
@@ -152,6 +183,11 @@ prefab rock_desert_cliff_b
 prefab rock_desert_cliff_c
 prefab rock_desert_cliff_far_a
 prefab rock_desert_cliff_top_a
+prefab scene: arabian_house_new_b_interior_a
+prefab scene: arabian_house_new_b_interior_b
+prefab scene: arabian_house_new_c_interior_a
+prefab scene: arabian_house_new_c_interior_b
+prefab scene: arabian_house_new_c_interior_c
 prefab shop_prop_merchantbakery_e
 prefab shop_prop_merchantbeer_e
 prefab shop_prop_merchantpottery_d
@@ -169,6 +205,10 @@ prefab sp_set_tavernkeeper_and_customer
 prefab sp_tavern_bar_wait
 prefab sp_tavernkeeper
 prefab stairs_short_a
+prefab state1
+prefab state2
+prefab state3
+prefab state4
 prefab sword_arabian_c
 prefab torch_candle_b_fire
 prefab torch_wall_d

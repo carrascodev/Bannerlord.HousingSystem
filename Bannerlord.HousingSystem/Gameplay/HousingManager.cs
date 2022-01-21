@@ -128,10 +128,11 @@ public class HousingManager : GenericSingleton<HousingManager>
 
     private void OnItemRosterUpdated(ItemRosterElement item, int count)
     {
-        if (_currentData.ItemRoster.Count > _currentData.StorageCapacity)
-        {
-            InventoryManager.InventoryLogic.TransferOne(item);
-        }
+        //TODO: 
+        // if (_currentData.ItemRoster.Count > _currentData.StorageCapacity)
+        // {
+        //     InventoryManager.InventoryLogic.TransferOne(item);
+        // }
     }
 
     public void RentHouse(Settlement settlement, HouseTier tier, bool rent = true)

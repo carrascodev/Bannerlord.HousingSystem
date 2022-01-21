@@ -1,6 +1,5 @@
-196
+195
 mesh editor_plane_low
-mesh foods_basket_apple
 prefab _barrier_passage_center
 prefab _to_carry_arm_kitchen_pot_c
 prefab _to_carry_bed_convolute_g

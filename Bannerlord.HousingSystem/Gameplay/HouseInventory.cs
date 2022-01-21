@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using MessagePack;
 using TaleWorlds.SaveSystem;
 
 namespace Bannerlord.HousingSystem;

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<scene name="battania_house1" version="2">
+<scene name="sturgia_house1" version="2">
 	<flora_bounding_rect min="0.000, 0.000" max="0.000, 0.000"/>
 	<levels>
 		<level name="base" mask="1"/>
@@ -41,14 +41,138 @@
 		</out_of_bounds_effects_properties>
 	</environment_properties>
 	<entities>
-		<game_entity prefab="sp_player">
-			<transform position="104.301, 149.403, 0.591" rotation_euler="0.000, 0.000, 0.681"/>
+		<game_entity prefab="bd_sturgian_chair_a">
+			<tags/>
+			<transform position="99.268, 154.334, 0.646" rotation_euler="0.000, 0.000, -2.297"/>
+		</game_entity>
+		<game_entity prefab="sp_mercenary">
+			<transform position="146.917, 48.931, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.750, 1.000"/>
+		</game_entity>
+		<game_entity prefab="sp_tavern_wench">
+			<transform position="143.300, 47.966, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity name="ground_plane" old_prefab_name="">
+			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
+			<physics shape="bo_editor_plane"/>
+			<components>
+				<meta_mesh_component name="editor_plane_low">
+					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="sp_tavernkeeper">
+			<transform position="144.243, 46.571, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_b">
+			<tags>
+				<tag name="npc_wait"/>
+				<tag name="npc_common"/>
+				<tag name="gambler_npc"/>
+			</tags>
+			<transform position="144.582, 48.770, 0.000" rotation_euler="0.000, 0.000, 0.722"/>
+		</game_entity>
+		<game_entity prefab="sp_guard">
+			<transform position="127.724, 118.001, 0.000" rotation_euler="0.000, 0.000, 0.330"/>
+		</game_entity>
+		<game_entity prefab="sp_npc_merchant_working">
+			<transform position="111.138, 111.341, 0.619" rotation_euler="0.000, 0.000, -0.051"/>
+		</game_entity>
+		<game_entity prefab="mountain_border_long_b">
+			<transform position="453.118, -1102.688, 0.000" rotation_euler="0.000, 0.000, -1.188" scale="7.875, 7.875, 7.875"/>
+			<scripts>
+				<script name="mesh_seasonal_material">
+					<variables>
+						<variable name="SummerMaterial" value="mountain_border_mat_long_b"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="bed_straw_a">
+			<transform position="99.668, 149.218, 0.647" rotation_euler="0.000, 0.000, -0.442"/>
+		</game_entity>
+		<game_entity prefab="_barrier_passage_center">
+			<transform position="105.105, 148.619, 0.570" rotation_euler="0.000, 0.000, -2.354" scale="4.000, 4.000, 4.000"/>
+		</game_entity>
+		<game_entity prefab="foods_basket_c">
+			<transform position="100.444, 156.654, 0.648" rotation_euler="0.000, 0.000, -3.130"/>
+		</game_entity>
+		<game_entity prefab="burning_campfire">
+			<transform position="100.581, 153.000, 0.789" rotation_euler="0.000, 0.000, -2.087" scale="0.900, 0.900, 1.000"/>
+		</game_entity>
+		<game_entity prefab="fence_e">
+			<transform position="110.415, 112.451, 0.748" rotation_euler="0.000, 0.000, -0.579"/>
+		</game_entity>
+		<game_entity prefab="burned_wood_e">
+			<transform position="101.139, 153.092, 0.804" rotation_euler="0.000, 0.000, -0.278"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="burned_wood_e" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_e.lod1" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_e.lod2" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_e.lod3" argument="1.000, 0.500, 1.000, 10.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="bd_wood_heap_a">
+			<transform position="105.108, 152.096, 0.645" rotation_euler="0.000, 0.000, -1.795"/>
+		</game_entity>
+		<game_entity prefab="mountain_border_d">
+			<transform position="400.011, -669.767, 0.000" rotation_euler="0.000, 0.000, 2.865" scale="17.612, 17.612, 17.612"/>
+			<scripts>
+				<script name="mesh_seasonal_material">
+					<variables>
+						<variable name="SummerMaterial" value="mountain_border_mat_d"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="armor_merchant_shoe_a">
+			<transform position="102.835, 148.550, 0.632" rotation_euler="0.000, 0.000, 0.495"/>
+		</game_entity>
+		<game_entity prefab="mountain_border_b">
+			<transform position="141.331, -946.258, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="6.538, 6.538, 6.538"/>
+			<scripts>
+				<script name="mesh_seasonal_material">
+					<variables>
+						<variable name="SummerMaterial" value="mountain_border_mat_b"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="spear_new_f_1-9m">
+			<transform position="96.762, 154.018, 0.648" rotation_euler="1.534, 1.454, -2.291"/>
+		</game_entity>
+		<game_entity prefab="burned_wood_c">
+			<transform position="100.860, 152.470, 0.790" rotation_euler="0.000, 0.000, -2.967"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="burned_wood_c" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_c.lod1" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_c.lod2" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_c.lod3" argument="1.000, 0.500, 1.000, 10.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="fence_e">
+			<transform position="113.473, 106.606, 0.206" rotation_euler="0.000, 0.000, -1.413"/>
+		</game_entity>
+		<game_entity prefab="conversation_scene_terrain_forest">
+			<transform position="125.401, 126.749, 0.000" rotation_euler="0.000, 0.000, -2.908"/>
+		</game_entity>
+		<game_entity prefab="bed_straw_d">
+			<transform position="97.774, 152.218, 0.646" rotation_euler="0.000, 0.000, -1.380"/>
+		</game_entity>
+		<game_entity prefab="pict_houses_b_interior">
+			<transform position="101.280, 152.350, 0.660" rotation_euler="0.000, 0.000, 0.794" scale="0.900, 0.900, 0.820"/>
 		</game_entity>
 		<game_entity prefab="bd_cartbroken_a">
 			<transform position="104.480, 127.993, 1.339" rotation_euler="0.000, 0.000, 1.360"/>
 		</game_entity>
-		<game_entity prefab="bed_straw_d">
-			<transform position="97.774, 152.218, 0.646" rotation_euler="0.000, 0.000, -1.380"/>
+		<game_entity prefab="battania_keep_door_a">
+			<transform position="105.838, 149.075, 0.701" rotation_euler="0.000, 0.000, 1.228" scale="0.851, 1.000, 0.932"/>
+		</game_entity>
+		<game_entity prefab="battania_keep_door_a">
+			<transform position="104.600, 147.900, 0.700" rotation_euler="0.000, 0.000, -2.328" scale="0.740, 1.000, 0.909"/>
 		</game_entity>
 		<game_entity prefab="mountain_border_d">
 			<transform position="-91.149, -704.629, 0.000" rotation_euler="0.000, 0.000, -1.698" scale="17.612, 17.612, 17.612"/>
@@ -60,20 +184,11 @@
 				</script>
 			</scripts>
 		</game_entity>
-		<game_entity prefab="battania_keep_door_a">
-			<transform position="105.838, 149.075, 0.701" rotation_euler="0.000, 0.000, 1.228" scale="0.851, 1.000, 0.932"/>
-		</game_entity>
-		<game_entity prefab="battania_keep_door_a">
-			<transform position="104.600, 147.900, 0.700" rotation_euler="0.000, 0.000, -2.328" scale="0.740, 1.000, 0.909"/>
-		</game_entity>
-		<game_entity prefab="pict_houses_b_interior">
-			<transform position="101.280, 152.350, 0.660" rotation_euler="0.000, 0.000, 0.794" scale="0.900, 0.900, 0.820"/>
+		<game_entity prefab="sp_player">
+			<transform position="104.301, 149.403, 0.591" rotation_euler="0.000, 0.000, 0.681"/>
 		</game_entity>
 		<game_entity prefab="pict_houses_d">
 			<transform position="100.872, 118.153, 2.712" rotation_euler="0.000, 0.000, -0.886"/>
-		</game_entity>
-		<game_entity prefab="pict_houses_f">
-			<transform position="153.642, 55.511, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="mountain_border_long_b">
 			<transform position="-212.659, -1003.400, 0.000" rotation_euler="0.000, 0.000, -1.188" scale="7.875, 7.875, 7.875"/>
@@ -85,6 +200,12 @@
 				</script>
 			</scripts>
 		</game_entity>
+		<game_entity prefab="pict_houses_f">
+			<transform position="153.642, 55.511, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="sp_sheep">
+			<transform position="109.662, 104.791, 0.829" rotation_euler="0.000, 0.000, 2.306" scale="0.800, 0.800, 0.800"/>
+		</game_entity>
 		<game_entity prefab="pict_town_house_b_burned">
 			<transform position="126.513, 36.882, 0.000" rotation_euler="0.000, 0.000, 2.922"/>
 		</game_entity>
@@ -95,17 +216,16 @@
 			<tags/>
 			<transform position="103.769, 155.492, 0.647" rotation_euler="0.000, 0.000, -2.300"/>
 		</game_entity>
-		<game_entity prefab="sp_sheep">
-			<transform position="109.662, 104.791, 0.829" rotation_euler="0.000, 0.000, 2.306" scale="0.800, 0.800, 0.800"/>
-		</game_entity>
-		<game_entity prefab="kitchen_cutting_food_fish">
-			<transform position="102.512, 151.347, 1.421" rotation_euler="0.000, 0.000, -0.633"/>
-		</game_entity>
-		<game_entity prefab="kitchen_cutting_food_bread">
-			<transform position="101.756, 151.522, 1.425" rotation_euler="0.000, 0.000, -0.667"/>
-		</game_entity>
-		<game_entity prefab="bd_table_e">
-			<transform position="102.199, 151.372, 0.625" rotation_euler="0.000, 0.000, -0.798"/>
+		<game_entity prefab="burned_wood_e">
+			<transform position="100.217, 153.357, 0.789" rotation_euler="0.000, 0.000, 0.909"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="burned_wood_e" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_e.lod1" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_e.lod2" argument="1.000, 0.500, 1.000, 10.000"/>
+					<mesh name="burned_wood_e.lod3" argument="1.000, 0.500, 1.000, 10.000"/>
+				</meta_mesh_component>
+			</components>
 		</game_entity>
 		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
 			<visibility_masks>
@@ -136,19 +256,33 @@
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="burned_wood_e">
-			<transform position="100.217, 153.357, 0.789" rotation_euler="0.000, 0.000, 0.909"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="burned_wood_e" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_e.lod1" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_e.lod2" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_e.lod3" argument="1.000, 0.500, 1.000, 10.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
 		<game_entity prefab="kitchen_bowl_b_two">
 			<transform position="102.048, 151.855, 1.420" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="torch_candle_c_fire">
+			<transform position="102.876, 150.996, 1.423" rotation_euler="0.000, 0.000, 0.000"/>
+			<children>
+				<game_entity _index_="0">
+					<components>
+						<light_component shadow_radius="4.800"/>
+					</components>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="bd_table_e">
+			<transform position="102.199, 151.372, 0.625" rotation_euler="0.000, 0.000, -0.798"/>
+		</game_entity>
+		<game_entity prefab="armor_merchant_clothes_a">
+			<transform position="102.125, 148.439, 0.642" rotation_euler="0.000, 0.000, 2.976"/>
+		</game_entity>
+		<game_entity prefab="kitchen_cutting_food_fish">
+			<transform position="102.512, 151.347, 1.421" rotation_euler="0.000, 0.000, -0.633"/>
+		</game_entity>
+		<game_entity prefab="sp_sheep">
+			<transform position="108.817, 110.013, 1.003" rotation_euler="0.000, 0.000, 3.111" scale="0.800, 0.800, 0.800"/>
+		</game_entity>
+		<game_entity prefab="sp_sheep">
+			<transform position="111.627, 107.244, 0.461" rotation_euler="0.000, 0.000, 0.614" scale="0.800, 0.800, 0.800"/>
 		</game_entity>
 		<game_entity prefab="burned_wood_e">
 			<transform position="100.140, 152.930, 0.790" rotation_euler="0.000, 0.000, 2.085"/>
@@ -161,154 +295,20 @@
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="armor_merchant_clothes_a">
-			<transform position="102.125, 148.439, 0.642" rotation_euler="0.000, 0.000, 2.976"/>
-		</game_entity>
-		<game_entity prefab="fence_e">
-			<transform position="113.192, 100.500, 0.394" rotation_euler="0.000, 0.000, -1.927"/>
-		</game_entity>
 		<game_entity prefab="mead_cup_wooden_a">
 			<transform position="102.247, 150.936, 1.426" rotation_euler="0.000, 0.000, -1.252"/>
 		</game_entity>
-		<game_entity prefab="bd_wood_c">
-			<transform position="98.543, 155.394, 0.647" rotation_euler="0.000, 0.000, -2.393"/>
-		</game_entity>
-		<game_entity prefab="sp_sheep">
-			<transform position="108.817, 110.013, 1.003" rotation_euler="0.000, 0.000, 3.111" scale="0.800, 0.800, 0.800"/>
+		<game_entity prefab="kitchen_cutting_food_bread">
+			<transform position="101.756, 151.522, 1.425" rotation_euler="0.000, 0.000, -0.667"/>
 		</game_entity>
 		<game_entity prefab="bd_stacked_wood">
 			<transform position="101.635, 156.901, 0.648" rotation_euler="0.000, 0.000, -2.333"/>
 		</game_entity>
-		<game_entity prefab="sp_sheep">
-			<transform position="111.627, 107.244, 0.461" rotation_euler="0.000, 0.000, 0.614" scale="0.800, 0.800, 0.800"/>
-		</game_entity>
-		<game_entity prefab="torch_candle_c_fire">
-			<transform position="102.876, 150.996, 1.423" rotation_euler="0.000, 0.000, 0.000"/>
-			<children>
-				<game_entity _index_="0">
-					<components>
-						<light_component shadow_radius="4.800"/>
-					</components>
-				</game_entity>
-			</children>
-		</game_entity>
-		<game_entity prefab="spear_new_f_1-9m">
-			<transform position="96.762, 154.018, 0.648" rotation_euler="1.534, 1.454, -2.291"/>
-		</game_entity>
-		<game_entity prefab="conversation_scene_terrain_forest">
-			<transform position="125.401, 126.749, 0.000" rotation_euler="0.000, 0.000, -2.908"/>
+		<game_entity prefab="bd_wood_c">
+			<transform position="98.543, 155.394, 0.647" rotation_euler="0.000, 0.000, -2.393"/>
 		</game_entity>
 		<game_entity prefab="fence_e">
-			<transform position="113.473, 106.606, 0.206" rotation_euler="0.000, 0.000, -1.413"/>
-		</game_entity>
-		<game_entity prefab="burned_wood_c">
-			<transform position="100.860, 152.470, 0.790" rotation_euler="0.000, 0.000, -2.967"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="burned_wood_c" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_c.lod1" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_c.lod2" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_c.lod3" argument="1.000, 0.500, 1.000, 10.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="mountain_border_b">
-			<transform position="141.331, -946.258, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="6.538, 6.538, 6.538"/>
-			<scripts>
-				<script name="mesh_seasonal_material">
-					<variables>
-						<variable name="SummerMaterial" value="mountain_border_mat_b"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
-		<game_entity prefab="armor_merchant_shoe_a">
-			<transform position="102.835, 148.550, 0.632" rotation_euler="0.000, 0.000, 0.495"/>
-		</game_entity>
-		<game_entity prefab="fence_e">
-			<transform position="110.415, 112.451, 0.748" rotation_euler="0.000, 0.000, -0.579"/>
-		</game_entity>
-		<game_entity prefab="burning_campfire">
-			<transform position="100.581, 153.000, 0.789" rotation_euler="0.000, 0.000, -2.087" scale="0.900, 0.900, 1.000"/>
-		</game_entity>
-		<game_entity prefab="burned_wood_e">
-			<transform position="101.139, 153.092, 0.804" rotation_euler="0.000, 0.000, -0.278"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="burned_wood_e" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_e.lod1" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_e.lod2" argument="1.000, 0.500, 1.000, 10.000"/>
-					<mesh name="burned_wood_e.lod3" argument="1.000, 0.500, 1.000, 10.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="mountain_border_d">
-			<transform position="400.011, -669.767, 0.000" rotation_euler="0.000, 0.000, 2.865" scale="17.612, 17.612, 17.612"/>
-			<scripts>
-				<script name="mesh_seasonal_material">
-					<variables>
-						<variable name="SummerMaterial" value="mountain_border_mat_d"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
-		<game_entity prefab="bd_wood_heap_a">
-			<transform position="105.108, 152.096, 0.645" rotation_euler="0.000, 0.000, -1.795"/>
-		</game_entity>
-		<game_entity prefab="foods_basket_c">
-			<transform position="100.444, 156.654, 0.648" rotation_euler="0.000, 0.000, -3.130"/>
-		</game_entity>
-		<game_entity name="ground_plane" old_prefab_name="">
-			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
-			<physics shape="bo_editor_plane"/>
-			<components>
-				<meta_mesh_component name="editor_plane_low">
-					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="bd_sturgian_chair_a">
-			<tags/>
-			<transform position="99.268, 154.334, 0.646" rotation_euler="0.000, 0.000, -2.297"/>
-		</game_entity>
-		<game_entity prefab="bed_straw_a">
-			<transform position="99.668, 149.218, 0.647" rotation_euler="0.000, 0.000, -0.442"/>
-		</game_entity>
-		<game_entity prefab="mountain_border_long_b">
-			<transform position="453.118, -1102.688, 0.000" rotation_euler="0.000, 0.000, -1.188" scale="7.875, 7.875, 7.875"/>
-			<scripts>
-				<script name="mesh_seasonal_material">
-					<variables>
-						<variable name="SummerMaterial" value="mountain_border_mat_long_b"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
-		<game_entity prefab="sp_npc_merchant_working">
-			<transform position="111.138, 111.341, 0.619" rotation_euler="0.000, 0.000, -0.051"/>
-		</game_entity>
-		<game_entity prefab="sp_guard">
-			<transform position="127.724, 118.001, 0.000" rotation_euler="0.000, 0.000, 0.330"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_b">
-			<tags>
-				<tag name="npc_wait"/>
-				<tag name="npc_common"/>
-				<tag name="gambler_npc"/>
-			</tags>
-			<transform position="144.582, 48.770, 0.000" rotation_euler="0.000, 0.000, 0.722"/>
-		</game_entity>
-		<game_entity prefab="sp_tavernkeeper">
-			<transform position="144.243, 46.571, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_tavern_wench">
-			<transform position="143.300, 47.966, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_mercenary">
-			<transform position="146.917, 48.931, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.750, 1.000"/>
-		</game_entity>
-		<game_entity prefab="_barrier_passage_center">
-			<transform position="105.105, 148.619, 0.570" rotation_euler="0.000, 0.000, -2.354" scale="4.000, 4.000, 4.000"/>
+			<transform position="113.192, 100.500, 0.394" rotation_euler="0.000, 0.000, -1.927"/>
 		</game_entity>
 	</entities>
 	<terrain enabled="true" node_dimension_x="3" node_dimension_y="3" node_size="100.000" lod_multiplier="1.000" min_height="-100.000" max_height="500.000" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="0" ao_intensity="4.000">
@@ -625,7 +625,7 @@
 			</node>
 		</nodes>
 	</terrain>
-	<editor_data editor_camera_position="100.441, 155.056, 3.674" editor_camera_elevation="-0.264" editor_camera_bearing="-10.918" editor_camera_forward="0.377, -0.856, -0.353" author="" comment=""/>
+	<editor_data editor_camera_position="100.441, 155.056, 3.674" editor_camera_elevation="-0.092" editor_camera_bearing="2.676" editor_camera_forward="0.377, -0.856, -0.353" author="" comment=""/>
 	<camera_data near_plane="0.100" far_plane="100000.000"/>
 	<Paths/>
 </scene>

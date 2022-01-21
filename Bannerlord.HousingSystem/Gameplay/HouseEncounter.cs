@@ -29,7 +29,6 @@ public class HouseEncounter : TownEncounter
         CharacterObject talkToChar = null,
         string playerSpecialSpawnTag = null)
     {
-        
         var missionController = CampaignMission.OpenIndoorMission(_sceneName, 0, _location, talkToChar) as Mission;
         return missionController;
     }

@@ -1,6 +1,5 @@
 135
-mesh animation_stand_arrow_blue
-mesh bd_chair_c
+mesh animation_stand_arrow_green
 mesh editor_plane_low
 mesh stonewall_2a2
 prefab Boardgame Sturgia
@@ -118,6 +117,7 @@ prefab sew_or_knit_chair
 prefab shield
 prefab smoked_fire_with_light
 prefab sp_mercenary
+prefab sp_player
 prefab sp_tavern_wench
 prefab sp_tavernkeeper
 prefab stonewall_2a2

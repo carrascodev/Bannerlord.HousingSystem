@@ -1,4 +1,3 @@
-using MessagePack;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.SaveSystem;
 

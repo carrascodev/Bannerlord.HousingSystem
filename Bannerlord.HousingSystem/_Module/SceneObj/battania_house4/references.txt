@@ -1,4 +1,4 @@
-333
+336
 flora_entity flora_grass_a
 flora_entity flora_grass_b
 flora_entity flora_green__mix
@@ -19,6 +19,8 @@ mesh torch_wall_b
 prefab Boardgame Sturgia
 prefab Boardpiece Sturgia Dice 
 prefab Sp_tavern_wench_customer_interaction
+prefab SpawnPointDebugView
+prefab _barrier_passage_center
 prefab _to_carry_arm_kitchen_pot_c
 prefab _to_carry_bed_convolute_g
 prefab _to_carry_kitchen_pitcher_a
@@ -228,6 +230,7 @@ prefab outer_f
 prefab outer_g
 prefab outer_h
 prefab outermesh_mountains_a
+prefab passage_use_point
 prefab pict_houses_g
 prefab pict_houses_h
 prefab pict_houses_storage

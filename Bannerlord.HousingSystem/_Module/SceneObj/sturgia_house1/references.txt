@@ -1,4 +1,4 @@
-84
+82
 flora_entity flora_grass_a
 flora_entity flora_grass_b
 flora_entity flora_plant_e
@@ -10,8 +10,6 @@ flora_entity grass_terrain_a
 flora_entity tree_high__mix_aspen
 flora_entity tree_high__mix_poplar
 flora_entity tree_high__mix_poplar_forest
-mesh arrow_new_icon
-mesh barrier
 mesh editor_plane_low
 prefab _barrier_passage_center
 prefab animation_point

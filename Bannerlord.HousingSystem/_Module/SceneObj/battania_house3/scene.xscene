@@ -170,15 +170,18 @@
 		<game_entity prefab="bd_cupboard_kitchen_a">
 			<transform position="102.962, 119.052, 0.126" rotation_euler="0.000, 0.000, -3.049"/>
 		</game_entity>
+		<game_entity prefab="bd_chair_d_tavern">
+			<tags/>
+			<transform position="99.265, 113.209, 0.163" rotation_euler="0.000, 0.000, 1.641"/>
+		</game_entity>
 		<game_entity prefab="bd_sturgian_chair_a_unsittable">
 			<transform position="100.595, 125.851, 0.161" rotation_euler="0.000, 0.000, -2.511"/>
 		</game_entity>
 		<game_entity prefab="bd_chair_b_unsittable">
 			<transform position="102.078, 126.124, 0.150" rotation_euler="0.000, 0.000, -0.986"/>
 		</game_entity>
-		<game_entity prefab="bd_chair_d_tavern">
-			<tags/>
-			<transform position="99.265, 113.209, 0.163" rotation_euler="0.000, 0.000, 1.641"/>
+		<game_entity prefab="stonewall_2a2">
+			<transform position="104.570, 118.110, 1.840" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="bd_chest_sturgia_f">
 			<transform position="98.578, 104.513, 0.208" rotation_euler="0.000, 0.000, -2.146"/>
@@ -192,9 +195,6 @@
 				</meta_mesh_component>
 			</components>
 		</game_entity>
-		<game_entity prefab="stonewall_2a2">
-			<transform position="104.570, 118.110, 1.840" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
 		<game_entity name="ground_plane" old_prefab_name="">
 			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
 			<physics shape="bo_editor_plane"/>
@@ -206,6 +206,32 @@
 		</game_entity>
 		<game_entity prefab="pict_tavern_interior_f">
 			<transform position="107.412, 114.843, 0.000" rotation_euler="0.000, 0.000, 0.098" scale="0.900, 0.900, 0.900"/>
+		</game_entity>
+		<game_entity prefab="vlandia_closet_e">
+			<transform position="111.163, 126.758, 0.124" rotation_euler="0.000, 0.000, -1.459"/>
+		</game_entity>
+		<game_entity prefab="bd_chest_sturgia_c">
+			<transform position="105.935, 127.891, 0.136" rotation_euler="0.000, 0.000, 1.556"/>
+		</game_entity>
+		<game_entity prefab="_barrier_passage_center">
+			<transform position="105.042, 115.036, 0.215" rotation_euler="0.000, 0.000, -1.506" scale="4.000, 4.000, 4.000"/>
+		</game_entity>
+		<game_entity prefab="sp_tavern_wench">
+			<transform position="125.072, 62.119, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="sp_tavernkeeper">
+			<transform position="127.330, 61.481, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="sp_mercenary">
+			<transform position="123.631, 61.473, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.750, 1.000"/>
+		</game_entity>
+		<game_entity prefab="sew_or_knit_chair">
+			<tags>
+				<tag name="npc_common"/>
+				<tag name="npc_wait"/>
+				<tag name="gambler_npc"/>
+			</tags>
+			<transform position="125.266, 60.486, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="bd_chest_sturgia_d">
 			<transform position="97.097, 117.016, 0.172" rotation_euler="0.000, 0.000, 1.664"/>
@@ -318,31 +344,8 @@
 		<game_entity prefab="bd_cloth_wall_a_battania">
 			<transform position="104.471, 124.542, 2.172" rotation_euler="0.000, 0.000, -1.802"/>
 		</game_entity>
-		<game_entity prefab="vlandia_closet_e">
-			<transform position="111.163, 126.758, 0.124" rotation_euler="0.000, 0.000, -1.459"/>
-		</game_entity>
-		<game_entity prefab="bd_chest_sturgia_c">
-			<transform position="105.935, 127.891, 0.136" rotation_euler="0.000, 0.000, 1.556"/>
-		</game_entity>
-		<game_entity prefab="_barrier_passage_center">
-			<transform position="105.042, 115.036, 0.215" rotation_euler="0.000, 0.000, -1.506" scale="4.000, 4.000, 4.000"/>
-		</game_entity>
-		<game_entity prefab="sp_tavern_wench">
-			<transform position="125.072, 62.119, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_tavernkeeper">
-			<transform position="127.330, 61.481, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_mercenary">
-			<transform position="123.631, 61.473, 0.000" rotation_euler="0.000, 0.000, 0.000" scale="0.750, 0.750, 1.000"/>
-		</game_entity>
-		<game_entity prefab="sew_or_knit_chair">
-			<tags>
-				<tag name="npc_common"/>
-				<tag name="npc_wait"/>
-				<tag name="gambler_npc"/>
-			</tags>
-			<transform position="125.266, 60.486, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		<game_entity prefab="sp_player">
+			<transform position="103.981, 114.829, 0.157" rotation_euler="0.000, 0.000, 1.785"/>
 		</game_entity>
 	</entities>
 	<terrain enabled="true" node_dimension_x="3" node_dimension_y="3" node_size="100.000" lod_multiplier="1.000" min_height="-100.000" max_height="500.000" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="0" ao_intensity="4.000">
@@ -628,7 +631,7 @@
 			</node>
 		</nodes>
 	</terrain>
-	<editor_data editor_camera_position="107.459, 125.609, 3.363" editor_camera_elevation="-0.157" editor_camera_bearing="-9.062" editor_camera_forward="0.298, -0.908, -0.295" author="" comment=""/>
+	<editor_data editor_camera_position="102.484, 109.438, 4.321" editor_camera_elevation="-0.384" editor_camera_bearing="7.060" editor_camera_forward="0.067, 0.855, -0.514" author="" comment=""/>
 	<camera_data near_plane="0.100" far_plane="100000.000"/>
 	<Paths/>
 </scene>

@@ -3,11 +3,11 @@
     "Empire": [
       {
         "Id": "house_empire_tier_1",
-        "Name": "House Tier 1",
+        "Name": "Run Down Apartment",
         "SceneName": "empire_houseT1",
         "Pricing": [
           5000,
-          6000
+          6500
         ],
         "Culture": "Empire",
         "StorageCapacity": 30,
@@ -15,11 +15,11 @@
       },
       {
         "Id": "house_empire_tier_2",
-        "Name": "House Tier 2",
+        "Name": "Small House",
         "SceneName": "empire_houseT2",
         "Pricing": [
-          10000,
-          20000
+          14000,
+          18000
         ],
         "Culture": "Empire",
         "StorageCapacity": 50,
@@ -27,11 +27,11 @@
       },
       {
         "Id": "house_empire_tier_3",
-        "Name": "House Tier 3",
+        "Name": "Merchant's House",
         "SceneName": "empire_houseT3",
         "Pricing": [
-          30000,
-          40000
+          40000,
+          50000
         ],
         "Culture": "Empire",
         "StorageCapacity": 100,
@@ -39,11 +39,11 @@
       },
       {
         "Id": "house_empire_tier_4",
-        "Name": "House Tier 4",
+        "Name": "Noble's House",
         "SceneName": "empire_houseT4",
         "Pricing": [
-          50000,
-          60000
+          120000,
+          150000
         ],
         "Culture": "Empire",
         "StorageCapacity": 200,
@@ -51,11 +51,11 @@
       },
       {
         "Id": "house_empire_tier_5",
-        "Name": "House Tier 5",
+        "Name": "Empire Palace",
         "SceneName": "empire_houseT5",
         "Pricing": [
-          70000,
-          80000
+          300000,
+          400000
         ],
         "Culture": "Empire",
         "StorageCapacity": 300,
@@ -65,11 +65,11 @@
     "Aserai": [
       {
         "Id": "house_aserai_tier_1",
-        "Name": "House Tier 1",
+        "Name": "Small Apartment",
         "SceneName": "aserai_house1",
         "Pricing": [
           5000,
-          6000
+          6500
         ],
         "Culture": "Aserai",
         "StorageCapacity": 30,
@@ -77,11 +77,11 @@
       },
       {
         "Id": "house_aserai_tier_2",
-        "Name": "House Tier 2",
+        "Name": "Craftsman's House",
         "SceneName": "aserai_house2",
         "Pricing": [
-          10000,
-          20000
+          14000,
+          18000
         ],
         "Culture": "Aserai",
         "StorageCapacity": 50,
@@ -89,11 +89,11 @@
       },
       {
         "Id": "house_aserai_tier_3",
-        "Name": "House Tier 3",
+        "Name": "Merchant's House",
         "SceneName": "aserai_house3",
         "Pricing": [
-          30000,
-          40000
+          40000,
+          50000
         ],
         "Culture": "Aserai",
         "StorageCapacity": 100,
@@ -101,11 +101,11 @@
       },
       {
         "Id": "house_aserai_tier_4",
-        "Name": "House Tier 4",
+        "Name": "Noble's House",
         "SceneName": "aserai_house4",
         "Pricing": [
-          50000,
-          60000
+          120000,
+          150000
         ],
         "Culture": "Aserai",
         "StorageCapacity": 200,
@@ -113,20 +113,231 @@
       },
       {
         "Id": "house_aserai_tier_5",
-        "Name": "House Tier 5",
+        "Name": "Emir's Palace",
         "SceneName": "aserai_house5",
         "Pricing": [
-          70000,
-          80000
+          300000,
+          400000
         ],
         "Culture": "Aserai",
         "StorageCapacity": 300,
         "Tier": "Tier5"
+      }],
+    "Khuzait": [
+      {
+        "Id": "house_khuzait_tier_1",
+        "Name": "Small Apartment",
+        "SceneName": "aserai_house1",
+        "Pricing": [
+          5000,
+          6500
+        ],
+        "Culture": "Khuzait",
+        "StorageCapacity": 30,
+        "Tier": "Tier1"
+      },
+      {
+        "Id": "house_khuzait_tier_2",
+        "Name": "Craftsman's House",
+        "SceneName": "aserai_house2",
+        "Pricing": [
+          14000,
+          18000
+        ],
+        "Culture": "Khuzait",
+        "StorageCapacity": 50,
+        "Tier": "Tier2"
+      },
+      {
+        "Id": "house_khuzait_tier_3",
+        "Name": "Merchant's House",
+        "SceneName": "aserai_house3",
+        "Pricing": [
+          40000,
+          50000
+        ],
+        "Culture": "Khuzait",
+        "StorageCapacity": 100,
+        "Tier": "Tier3"
+      },
+      {
+        "Id": "house_khuzait_tier_4",
+        "Name": "Noble's House",
+        "SceneName": "aserai_house4",
+        "Pricing": [
+          120000,
+          150000
+        ],
+        "Culture": "Khuzait",
+        "StorageCapacity": 200,
+        "Tier": "Tier4"
+      },
+      {
+        "Id": "house_khuzait_tier_5",
+        "Name": "Khan's Palace",
+        "SceneName": "aserai_house5",
+        "Pricing": [
+          300000,
+          400000
+        ],
+        "Culture": "Khuzait",
+        "StorageCapacity": 300,
+        "Tier": "Tier5"
+      }
+    ],
+    "Vlandia": [
+      {
+        "Id": "house_vlandia_tier_1",
+        "Name": "Small Apartment",
+        "SceneName": "vlandia_house1",
+        "Pricing": [
+          5000,
+          6500
+        ],
+        "Culture": "Vlandia",
+        "StorageCapacity": 30,
+        "Tier": "Tier1"
+      },
+      {
+        "Id": "house_vlandia_tier_2",
+        "Name": "Craftsman's House",
+        "SceneName": "vlandia_house2",
+        "Pricing": [
+          14000,
+          18000
+        ],
+        "Culture": "Vlandia",
+        "StorageCapacity": 50,
+        "Tier": "Tier2"
+      },
+      {
+        "Id": "house_vlandia_tier_3",
+        "Name": "Merchant's House",
+        "SceneName": "vlandia_house3",
+        "Pricing": [
+          40000,
+          50000
+        ],
+        "Culture": "Vlandia",
+        "StorageCapacity": 100,
+        "Tier": "Tier3"
+      },
+      {
+        "Id": "house_vlandia_tier_4",
+        "Name": "Baron's Fort",
+        "SceneName": "vlandia_house4",
+        "Pricing": [
+          120000,
+          150000
+        ],
+        "Culture": "Vlandia",
+        "StorageCapacity": 200,
+        "Tier": "Tier4"
+      }
+    ],
+    "Battania": [
+      {
+        "Id": "house_battania_tier_1",
+        "Name": "Small Shack",
+        "SceneName": "battania_house1",
+        "Pricing": [
+          5000,
+          6500
+        ],
+        "Culture": "Battania",
+        "StorageCapacity": 30,
+        "Tier": "Tier1"
+      },
+      {
+        "Id": "house_battania_tier_2",
+        "Name": "Craftsman's House",
+        "SceneName": "battania_house2",
+        "Pricing": [
+          14000,
+          18000
+        ],
+        "Culture": "Battania",
+        "StorageCapacity": 50,
+        "Tier": "Tier2"
+      },
+      {
+        "Id": "house_battania_tier_3",
+        "Name": "Battanian Longhouse",
+        "SceneName": "battania_house3",
+        "Pricing": [
+          40000,
+          50000
+        ],
+        "Culture": "Battania",
+        "StorageCapacity": 100,
+        "Tier": "Tier3"
+      },
+      {
+        "Id": "house_battania_tier_4",
+        "Name": "Warlord's Fort",
+        "SceneName": "battania_house4",
+        "Pricing": [
+          120000,
+          150000
+        ],
+        "Culture": "Battania",
+        "StorageCapacity": 200,
+        "Tier": "Tier4"
+      }
+    ],
+    "Sturgia": [
+      {
+        "Id": "house_sturgia_tier_1",
+        "Name": "Small Shack",
+        "SceneName": "sturgia_house1",
+        "Pricing": [
+          5000,
+          6500
+        ],
+        "Culture": "Sturgia",
+        "StorageCapacity": 30,
+        "Tier": "Tier1"
+      },
+      {
+        "Id": "house_sturgia_tier_2",
+        "Name": "Craftsman's House",
+        "SceneName": "sturgia_house2",
+        "Pricing": [
+          14000,
+          18000
+        ],
+        "Culture": "Sturgia",
+        "StorageCapacity": 50,
+        "Tier": "Tier2"
+      },
+      {
+        "Id": "house_sturgia_tier_3",
+        "Name": "Sturgian Longhouse",
+        "SceneName": "sturgia_house3",
+        "Pricing": [
+          40000,
+          50000
+        ],
+        "Culture": "Sturgia",
+        "StorageCapacity": 100,
+        "Tier": "Tier3"
+      },
+      {
+        "Id": "house_sturgia_tier_4",
+        "Name": "Jarl's Palace",
+        "SceneName": "sturgia_house4",
+        "Pricing": [
+          120000,
+          150000
+        ],
+        "Culture": "Sturgia",
+        "StorageCapacity": 200,
+        "Tier": "Tier4"
       }
     ]
   },
   "Settings": {
     "GoodProsperity": 1999,
-    "RentRevenuePercentage": 10
+    "RentRevenuePercentage": 5
   }
 }

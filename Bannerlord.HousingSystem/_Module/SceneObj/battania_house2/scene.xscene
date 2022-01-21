@@ -41,38 +41,243 @@
 		</out_of_bounds_effects_properties>
 	</environment_properties>
 	<entities>
-		<game_entity prefab="wooden_platform_2_ladder_a">
-			<transform position="78.103, 122.116, 0.305" rotation_euler="-0.226, -0.005, 1.538"/>
+		<game_entity prefab="battania_street_tent_a">
+			<transform position="62.882, 129.600, 0.098" rotation_euler="0.000, 0.000, -1.469"/>
 		</game_entity>
-		<game_entity prefab="pottery_a">
-			<transform position="66.182, 112.815, 0.098" rotation_euler="0.261, 0.000, 0.000"/>
+		<game_entity prefab="mp_shop_prop_merchantcarpenter_a">
+			<transform position="63.219, 129.732, 0.098" rotation_euler="0.000, 0.000, -1.424"/>
+		</game_entity>
+		<game_entity prefab="pict_houses_e">
+			<transform position="99.837, 128.419, 0.000" rotation_euler="0.000, 0.000, 1.225"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_tower_round_a_l2">
+			<transform position="99.652, 87.108, 0.000" rotation_euler="0.000, 0.000, -2.983"/>
+			<children>
+				<game_entity _index_="1">
+					<children>
+						<game_entity _index_="0">
+							<scripts>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+								<script name="AmbientSoundEmitter">
+									<variables>
+										<variable name="Overrided Max Distance" value="20.000000"/>
+										<variable name="Overrided Min Distance" value="1.000000"/>
+									</variables>
+								</script>
+							</scripts>
+						</game_entity>
+					</children>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="pict_houses_d">
+			<transform position="90.014, 141.976, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity name="ground_plane" old_prefab_name="">
+			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
+			<physics shape="bo_editor_plane"/>
+			<components>
+				<meta_mesh_component name="editor_plane_low">
+					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="71.150, 141.200, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="73.230, 123.740, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
+		</game_entity>
+		<game_entity prefab="pict_town_house_a">
+			<transform position="60.465, 86.899, 0.000" rotation_euler="0.000, 0.000, 3.138"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="57.134, 124.927, 0.000" rotation_euler="0.000, 0.000, 0.039"/>
+		</game_entity>
+		<game_entity prefab="pict_houses_c_interior">
+			<transform position="80.420, 127.900, 0.300" rotation_euler="0.000, 0.000, -1.534"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="62.240, 124.660, 0.000" rotation_euler="0.000, 0.000, -0.009"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="76.630, 141.210, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="bd_cart_heap_e">
+			<transform position="62.257, 120.036, 0.098" rotation_euler="0.000, 0.000, 2.167"/>
+		</game_entity>
+		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
+			<visibility_masks>
+				<visibility_mask name="no_shadow" value="true"/>
+				<visibility_mask name="visible_only_when_editing" value="true"/>
+			</visibility_masks>
+			<transform position="20.000, 0.000, 5.000" rotation_euler="0.000, 0.000, 0.000"/>
+			<scripts>
+				<script name="ReflectionCapturer">
+					<variables>
+						<variable name="IsGlobal" value="true"/>
+						<variable name="IsParallaxCorrected" value="false"/>
+						<variable name="AmbientMultiplier" value="1.000"/>
+						<variable name="AttenuationCoef" value="20.000"/>
+						<variable name="BoxOffset" value="0.000, 0.000, 0.000, 0.000"/>
+					</variables>
+				</script>
+			</scripts>
+		</game_entity>
+		<game_entity prefab="armor_merchant_clothes_d">
+			<transform position="77.202, 134.853, 0.306" rotation_euler="0.000, 0.000, 1.287"/>
+		</game_entity>
+		<game_entity prefab="sp_guard">
+			<transform position="82.441, 110.423, 0.098" rotation_euler="0.000, 0.000, 1.002"/>
+		</game_entity>
+		<game_entity prefab="bed_wodden_straw_b">
+			<transform position="80.162, 134.972, 0.306" rotation_euler="0.000, 0.000, -1.517"/>
+		</game_entity>
+		<game_entity prefab="vlandia_chest_a">
+			<transform position="82.045, 136.380, 0.307" rotation_euler="0.000, 0.000, 0.031"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_c">
+			<transform position="80.112, 124.438, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_stew_b">
+			<transform position="80.549, 122.221, 1.114" rotation_euler="0.000, 0.000, -1.272"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_c">
+			<transform position="80.129, 123.195, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
+		</game_entity>
+		<game_entity prefab="fire_stones_bonfire">
+			<transform position="81.261, 128.310, 0.304" rotation_euler="0.000, 0.000, 1.303"/>
+		</game_entity>
+		<game_entity prefab="torch_wall_c">
+			<transform position="82.445, 115.024, 1.896" rotation_euler="0.000, 0.000, -1.303"/>
+		</game_entity>
+		<game_entity prefab="mat_carpet_h">
+			<transform position="80.150, 133.500, 0.310" rotation_euler="0.000, 0.000, -1.531"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="81.414, 141.318, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
+		</game_entity>
+		<game_entity prefab="bd_chair_b_01">
+			<tags/>
+			<transform position="81.246, 121.010, 0.306" rotation_euler="0.000, 0.000, -2.251"/>
+		</game_entity>
+		<game_entity prefab="torch_wall_c">
+			<transform position="67.070, 136.501, 1.978" rotation_euler="0.000, 0.000, 0.136"/>
+		</game_entity>
+		<game_entity prefab="mat_carpet_i">
+			<transform position="79.135, 128.470, 0.302" rotation_euler="0.000, 0.000, -1.518"/>
+		</game_entity>
+		<game_entity prefab="torch_candle_c_fire">
+			<transform position="80.596, 123.055, 1.114" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="torch_wall_c">
+			<transform position="63.088, 116.949, 2.128" rotation_euler="0.000, 0.000, 2.902"/>
+		</game_entity>
+		<game_entity prefab="torch_candle_b_fire">
+			<transform position="81.955, 136.449, 1.039" rotation_euler="0.000, 0.000, 0.000"/>
+		</game_entity>
+		<game_entity prefab="log_bench_default_c">
+			<tags/>
+			<transform position="81.559, 130.740, 0.304" rotation_euler="0.000, 0.000, -1.444"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="97.623, 96.213, 0.000" rotation_euler="0.000, 0.000, -1.442"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="96.211, 110.301, 0.000" rotation_euler="0.000, 0.000, -1.442"/>
+		</game_entity>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="108.488, 106.687, 0.000" rotation_euler="0.000, 0.000, -1.442"/>
+		</game_entity>
+		<game_entity prefab="armor_merchant_helmet_a">
+			<transform position="81.690, 136.342, 1.039" rotation_euler="0.000, 0.000, 2.057"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_c">
+			<transform position="81.007, 123.232, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_keep">
+			<transform position="147.837, 178.192, 0.000" rotation_euler="0.000, 0.000, -0.878"/>
+		</game_entity>
+		<game_entity prefab="ruinous_castle_floor_b_tilable">
+			<transform position="88.384, 127.401, 0.000" rotation_euler="0.000, 0.000, 0.066"/>
+		</game_entity>
+		<game_entity prefab="ruinous_castle_floor_b_tilable">
+			<transform position="89.621, 135.430, 0.000" rotation_euler="0.000, 0.000, 0.066"/>
+		</game_entity>
+		<game_entity prefab="ruinous_castle_floor_b_tilable">
+			<transform position="94.333, 136.575, 0.000" rotation_euler="0.000, 0.000, 0.066"/>
+		</game_entity>
+		<game_entity prefab="ruinous_castle_floor_b_tilable">
+			<transform position="89.542, 124.227, 0.125" rotation_euler="0.000, 0.000, 0.066"/>
+		</game_entity>
+		<game_entity prefab="sp_player">
+			<transform position="74.813, 127.828, 0.098" rotation_euler="0.000, 0.000, -1.506"/>
+		</game_entity>
+		<game_entity prefab="battania_castle_gatehouse">
+			<transform position="91.652, 111.076, 0.098" rotation_euler="0.000, 0.000, 1.418"/>
+			<children>
+				<game_entity _index_="82">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+				<game_entity _index_="83">
+					<scripts>
+						<script name="AmbientSoundEmitter">
+							<variables>
+								<variable name="Overrided Max Distance" value="20.000000"/>
+								<variable name="Overrided Min Distance" value="1.000000"/>
+							</variables>
+						</script>
+					</scripts>
+				</game_entity>
+			</children>
+		</game_entity>
+		<game_entity prefab="bd_cupboard_kitchen_a">
+			<transform position="77.080, 130.693, 0.307" rotation_euler="0.000, 0.000, 1.613"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_b">
+			<transform position="82.825, 127.692, 1.104" rotation_euler="0.000, 0.000, -1.783"/>
+		</game_entity>
+		<game_entity prefab="kitchen_pot_b">
+			<transform position="82.996, 128.534, 1.103" rotation_euler="0.000, 0.000, -0.489"/>
+		</game_entity>
+		<game_entity prefab="kitchen_bowl_c">
+			<transform position="80.988, 124.501, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
+		</game_entity>
+		<game_entity prefab="pict_town_house_b">
+			<transform position="89.438, 165.707, 0.000" rotation_euler="0.000, 0.000, 1.641"/>
+		</game_entity>
+		<game_entity prefab="pict_houses_b">
+			<transform position="101.529, 140.290, 0.000" rotation_euler="0.000, 0.000, 2.232"/>
+		</game_entity>
+		<game_entity prefab="pict_houses_e">
+			<transform position="32.974, 111.894, 0.000" rotation_euler="0.000, 0.000, 3.057"/>
+		</game_entity>
+		<game_entity prefab="bd_table_e">
+			<transform position="82.993, 128.282, 0.306" rotation_euler="0.000, 0.000, -1.544"/>
+		</game_entity>
+		<game_entity prefab="bd_cart_heap_d">
+			<transform position="61.720, 123.770, 0.098" rotation_euler="0.000, 0.000, -0.375"/>
 		</game_entity>
 		<game_entity prefab="bd_sturgian_chair_a_unsittable">
 			<transform position="84.073, 120.234, 0.307" rotation_euler="0.000, 0.000, -2.818"/>
 		</game_entity>
-		<game_entity prefab="bd_flask_sturgia_b">
-			<transform position="83.429, 119.884, 0.307" rotation_euler="0.000, 0.000, 1.278"/>
-			<components>
-				<meta_mesh_component>
-					<mesh name="bd_flask_sturgia_b.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod1.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod2.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod3.10" argument="1.000, 0.010, 0.010, 1.000"/>
-					<mesh name="bd_flask_sturgia_b.lod4.10" argument="1.000, 0.010, 0.010, 1.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="bd_stacked_wood">
-			<transform position="77.681, 120.434, 0.306" rotation_euler="0.000, 0.000, 1.680"/>
-		</game_entity>
-		<game_entity prefab="_to_carry_bed_convolute_g">
-			<transform position="84.082, 120.253, 0.803" rotation_euler="-0.141, 0.072, -0.748" scale="0.600, 0.600, 0.600"/>
-		</game_entity>
 		<game_entity prefab="bd_stacked_wood">
 			<transform position="77.747, 119.818, 0.307" rotation_euler="0.000, 0.000, -1.484"/>
 		</game_entity>
-		<game_entity prefab="bd_wood_heap_b">
-			<transform position="78.970, 116.941, 0.098" rotation_euler="0.000, 0.000, -0.014"/>
+		<game_entity prefab="wooden_platform_2_ladder_a">
+			<transform position="78.103, 122.116, 0.305" rotation_euler="-0.226, -0.005, 1.538"/>
 		</game_entity>
 		<game_entity prefab="battania_castle_gatehouse_a_l3">
 			<transform position="150.667, 144.114, 0.000" rotation_euler="0.000, 0.000, -1.571"/>
@@ -138,6 +343,30 @@
 					</scripts>
 				</game_entity>
 			</children>
+		</game_entity>
+		<game_entity prefab="bd_wood_heap_b">
+			<transform position="78.970, 116.941, 0.098" rotation_euler="0.000, 0.000, -0.014"/>
+		</game_entity>
+		<game_entity prefab="bd_stacked_wood">
+			<transform position="77.681, 120.434, 0.306" rotation_euler="0.000, 0.000, 1.680"/>
+		</game_entity>
+		<game_entity prefab="_to_carry_bed_convolute_g">
+			<transform position="84.082, 120.253, 0.803" rotation_euler="-0.141, 0.072, -0.748" scale="0.600, 0.600, 0.600"/>
+		</game_entity>
+		<game_entity prefab="bd_flask_sturgia_b">
+			<transform position="83.429, 119.884, 0.307" rotation_euler="0.000, 0.000, 1.278"/>
+			<components>
+				<meta_mesh_component>
+					<mesh name="bd_flask_sturgia_b.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod1.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod2.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod3.10" argument="1.000, 0.010, 0.010, 1.000"/>
+					<mesh name="bd_flask_sturgia_b.lod4.10" argument="1.000, 0.010, 0.010, 1.000"/>
+				</meta_mesh_component>
+			</components>
+		</game_entity>
+		<game_entity prefab="pottery_a">
+			<transform position="66.182, 112.815, 0.098" rotation_euler="0.261, 0.000, 0.000"/>
 		</game_entity>
 		<game_entity prefab="mead_cup">
 			<transform position="80.392, 124.319, 1.114" rotation_euler="0.000, 0.000, 2.919"/>
@@ -248,111 +477,28 @@
 		<game_entity prefab="log_bench_beech_c_unsittable">
 			<transform position="79.407, 123.770, 0.304" rotation_euler="0.000, 0.000, 0.132"/>
 		</game_entity>
-		<game_entity prefab="armor_merchant_clothes_d">
-			<transform position="77.202, 134.853, 0.306" rotation_euler="0.000, 0.000, 1.287"/>
+		<game_entity prefab="torch_wall_a_cycleoff">
+			<transform position="76.290, 129.410, 1.650" rotation_euler="0.000, 0.000, -1.459"/>
+			<children>
+				<game_entity _index_="0">
+					<transform rotation_euler="1.128, 2.547, -3.140"/>
+				</game_entity>
+			</children>
 		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="73.230, 123.740, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="76.630, 141.210, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="71.150, 141.200, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="57.134, 124.927, 0.000" rotation_euler="0.000, 0.000, 0.039"/>
-		</game_entity>
-		<game_entity name="ground_plane" old_prefab_name="">
-			<transform position="10.000, 10.000, 0.010" rotation_euler="0.000, 0.000, 0.000" scale="20.000, 20.000, 20.000"/>
-			<physics shape="bo_editor_plane"/>
-			<components>
-				<meta_mesh_component name="editor_plane_low">
-					<mesh name="editor_plane_low" argument="1.000, 0.000, 0.000, 0.000"/>
-				</meta_mesh_component>
-			</components>
-		</game_entity>
-		<game_entity prefab="pict_houses_c_interior">
-			<transform position="80.420, 127.900, 0.300" rotation_euler="0.000, 0.000, -1.534"/>
-		</game_entity>
-		<game_entity name="envmap_probe" old_prefab_name="" mobility="1">
-			<visibility_masks>
-				<visibility_mask name="no_shadow" value="true"/>
-				<visibility_mask name="visible_only_when_editing" value="true"/>
-			</visibility_masks>
-			<transform position="20.000, 0.000, 5.000" rotation_euler="0.000, 0.000, 0.000"/>
-			<scripts>
-				<script name="ReflectionCapturer">
-					<variables>
-						<variable name="IsGlobal" value="true"/>
-						<variable name="IsParallaxCorrected" value="false"/>
-						<variable name="AmbientMultiplier" value="1.000"/>
-						<variable name="AttenuationCoef" value="20.000"/>
-						<variable name="BoxOffset" value="0.000, 0.000, 0.000, 0.000"/>
-					</variables>
-				</script>
-			</scripts>
-		</game_entity>
-		<game_entity prefab="pict_town_house_a">
-			<transform position="60.465, 86.899, 0.000" rotation_euler="0.000, 0.000, 3.138"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="62.240, 124.660, 0.000" rotation_euler="0.000, 0.000, -0.009"/>
-		</game_entity>
-		<game_entity prefab="bd_cart_heap_e">
-			<transform position="62.257, 120.036, 0.098" rotation_euler="0.000, 0.000, 2.167"/>
-		</game_entity>
-		<game_entity prefab="torch_candle_c_fire">
-			<transform position="80.596, 123.055, 1.114" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="mat_carpet_i">
-			<transform position="79.135, 128.470, 0.302" rotation_euler="0.000, 0.000, -1.518"/>
-		</game_entity>
-		<game_entity prefab="torch_wall_c">
-			<transform position="67.070, 136.501, 1.978" rotation_euler="0.000, 0.000, 0.136"/>
-		</game_entity>
-		<game_entity prefab="bd_chair_b_01">
-			<tags/>
-			<transform position="81.246, 121.010, 0.306" rotation_euler="0.000, 0.000, -2.251"/>
-		</game_entity>
-		<game_entity prefab="torch_wall_c">
-			<transform position="82.445, 115.024, 1.896" rotation_euler="0.000, 0.000, -1.303"/>
-		</game_entity>
-		<game_entity prefab="fire_stones_bonfire">
-			<transform position="81.261, 128.310, 0.304" rotation_euler="0.000, 0.000, 1.303"/>
-		</game_entity>
-		<game_entity prefab="torch_candle_b_fire">
-			<transform position="81.955, 136.449, 1.039" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="torch_wall_c">
-			<transform position="63.088, 116.949, 2.128" rotation_euler="0.000, 0.000, 2.902"/>
-		</game_entity>
-		<game_entity prefab="mat_carpet_h">
-			<transform position="80.150, 133.500, 0.310" rotation_euler="0.000, 0.000, -1.531"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="81.414, 141.318, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="78.760, 123.750, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
+		<game_entity prefab="foods_basket_apple">
+			<transform position="75.834, 128.983, 0.098" rotation_euler="0.000, 0.000, -0.583"/>
 		</game_entity>
 		<game_entity prefab="module_european_stone_floor_d">
 			<transform position="61.350, 142.140, 0.000" rotation_euler="0.000, 0.000, -0.076"/>
 		</game_entity>
 		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="56.399, 141.636, 0.000" rotation_euler="0.000, 0.000, 0.101"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
 			<transform position="67.745, 124.056, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
 		</game_entity>
 		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="67.948, 113.605, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
+			<transform position="78.760, 123.750, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
 		</game_entity>
 		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="65.730, 141.560, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
-		</game_entity>
-		<game_entity prefab="sp_merchant_working">
-			<transform position="62.700, 130.626, 0.098" rotation_euler="0.000, 0.000, -0.870"/>
+			<transform position="67.948, 113.605, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
 		</game_entity>
 		<game_entity prefab="battania_castle_tower_round_a_l3">
 			<transform position="146.097, 125.911, 0.000" rotation_euler="0.000, 0.000, -2.246"/>
@@ -395,149 +541,40 @@
 				</game_entity>
 			</children>
 		</game_entity>
-		<game_entity prefab="bd_cart_heap_d">
-			<transform position="61.720, 123.770, 0.098" rotation_euler="0.000, 0.000, -0.375"/>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="56.399, 141.636, 0.000" rotation_euler="0.000, 0.000, 0.101"/>
 		</game_entity>
-		<game_entity prefab="pict_houses_e">
-			<transform position="99.837, 128.419, 0.000" rotation_euler="0.000, 0.000, 1.225"/>
+		<game_entity prefab="sp_merchant_working">
+			<transform position="62.700, 130.626, 0.098" rotation_euler="0.000, 0.000, -0.870"/>
 		</game_entity>
-		<game_entity prefab="pict_houses_d">
-			<transform position="90.014, 141.976, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="mp_shop_prop_merchantcarpenter_a">
-			<transform position="63.219, 129.732, 0.098" rotation_euler="0.000, 0.000, -1.424"/>
-		</game_entity>
-		<game_entity prefab="battania_street_tent_a">
-			<transform position="62.882, 129.600, 0.098" rotation_euler="0.000, 0.000, -1.469"/>
-		</game_entity>
-		<game_entity prefab="battania_castle_tower_round_a_l2">
-			<transform position="99.652, 87.108, 0.000" rotation_euler="0.000, 0.000, -2.983"/>
-			<children>
-				<game_entity _index_="1">
-					<children>
-						<game_entity _index_="0">
-							<scripts>
-								<script name="AmbientSoundEmitter">
-									<variables>
-										<variable name="Overrided Max Distance" value="20.000000"/>
-										<variable name="Overrided Min Distance" value="1.000000"/>
-									</variables>
-								</script>
-								<script name="AmbientSoundEmitter">
-									<variables>
-										<variable name="Overrided Max Distance" value="20.000000"/>
-										<variable name="Overrided Min Distance" value="1.000000"/>
-									</variables>
-								</script>
-							</scripts>
-						</game_entity>
-					</children>
-				</game_entity>
-			</children>
-		</game_entity>
-		<game_entity prefab="log_bench_default_c">
-			<tags/>
-			<transform position="81.559, 130.740, 0.304" rotation_euler="0.000, 0.000, -1.444"/>
-		</game_entity>
-		<game_entity prefab="bed_wodden_straw_b">
-			<transform position="80.162, 134.972, 0.306" rotation_euler="0.000, 0.000, -1.517"/>
-		</game_entity>
-		<game_entity prefab="kitchen_bowl_stew_b">
-			<transform position="80.549, 122.221, 1.114" rotation_euler="0.000, 0.000, -1.272"/>
-		</game_entity>
-		<game_entity prefab="vlandia_chest_a">
-			<transform position="82.045, 136.380, 0.307" rotation_euler="0.000, 0.000, 0.031"/>
+		<game_entity prefab="module_european_stone_floor_d">
+			<transform position="65.730, 141.560, 0.000" rotation_euler="0.000, 0.000, 0.012"/>
 		</game_entity>
 		<game_entity prefab="sp_guard">
-			<transform position="82.441, 110.423, 0.098" rotation_euler="0.000, 0.000, 1.002"/>
+			<transform position="109.350, 139.144, 14.869" rotation_euler="0.000, 0.000, 1.763"/>
 		</game_entity>
-		<game_entity prefab="kitchen_bowl_c">
-			<transform position="80.129, 123.195, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
+		<game_entity prefab="mat_carpet_i">
+			<transform position="75.240, 127.740, 0.100" rotation_euler="0.000, 0.000, 0.035" scale="0.700, 0.700, 1.000"/>
 		</game_entity>
-		<game_entity prefab="kitchen_bowl_c">
-			<transform position="80.112, 124.438, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
+		<game_entity prefab="sp_tavernkeeper">
+			<transform position="122.974, 87.926, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="bd_cupboard_kitchen_a">
-			<transform position="77.080, 130.693, 0.307" rotation_euler="0.000, 0.000, 1.613"/>
+		<game_entity prefab="sp_tavern_wench">
+			<transform position="124.820, 89.606, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="kitchen_bowl_b">
-			<transform position="82.825, 127.692, 1.104" rotation_euler="0.000, 0.000, -1.783"/>
+		<game_entity prefab="sp_mercenary">
+			<transform position="63.696, 135.181, 0.098" rotation_euler="0.000, 0.000, -2.928" scale="0.750, 0.750, 1.000"/>
 		</game_entity>
-		<game_entity prefab="bd_table_e">
-			<transform position="82.993, 128.282, 0.306" rotation_euler="0.000, 0.000, -1.544"/>
+		<game_entity prefab="sew_or_knit_chair">
+			<tags>
+				<tag name="npc_common"/>
+				<tag name="npc_wait"/>
+				<tag name="gambler_npc"/>
+			</tags>
+			<transform position="124.784, 87.676, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
 		</game_entity>
-		<game_entity prefab="kitchen_pot_b">
-			<transform position="82.996, 128.534, 1.103" rotation_euler="0.000, 0.000, -0.489"/>
-		</game_entity>
-		<game_entity prefab="kitchen_bowl_c">
-			<transform position="80.988, 124.501, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
-		</game_entity>
-		<game_entity prefab="pict_houses_e">
-			<transform position="32.974, 111.894, 0.000" rotation_euler="0.000, 0.000, 3.057"/>
-		</game_entity>
-		<game_entity prefab="pict_houses_b">
-			<transform position="101.529, 140.290, 0.000" rotation_euler="0.000, 0.000, 2.232"/>
-		</game_entity>
-		<game_entity prefab="pict_town_house_b">
-			<transform position="89.438, 165.707, 0.000" rotation_euler="0.000, 0.000, 1.641"/>
-		</game_entity>
-		<game_entity prefab="ruinous_castle_floor_b_tilable">
-			<transform position="88.384, 127.401, 0.000" rotation_euler="0.000, 0.000, 0.066"/>
-		</game_entity>
-		<game_entity prefab="ruinous_castle_floor_b_tilable">
-			<transform position="89.621, 135.430, 0.000" rotation_euler="0.000, 0.000, 0.066"/>
-		</game_entity>
-		<game_entity prefab="ruinous_castle_floor_b_tilable">
-			<transform position="94.333, 136.575, 0.000" rotation_euler="0.000, 0.000, 0.066"/>
-		</game_entity>
-		<game_entity prefab="ruinous_castle_floor_b_tilable">
-			<transform position="89.542, 124.227, 0.125" rotation_euler="0.000, 0.000, 0.066"/>
-		</game_entity>
-		<game_entity prefab="sp_player">
-			<transform position="74.813, 127.828, 0.098" rotation_euler="0.000, 0.000, -1.506"/>
-		</game_entity>
-		<game_entity prefab="battania_castle_gatehouse">
-			<transform position="91.652, 111.076, 0.098" rotation_euler="0.000, 0.000, 1.418"/>
-			<children>
-				<game_entity _index_="82">
-					<scripts>
-						<script name="AmbientSoundEmitter">
-							<variables>
-								<variable name="Overrided Max Distance" value="20.000000"/>
-								<variable name="Overrided Min Distance" value="1.000000"/>
-							</variables>
-						</script>
-					</scripts>
-				</game_entity>
-				<game_entity _index_="83">
-					<scripts>
-						<script name="AmbientSoundEmitter">
-							<variables>
-								<variable name="Overrided Max Distance" value="20.000000"/>
-								<variable name="Overrided Min Distance" value="1.000000"/>
-							</variables>
-						</script>
-					</scripts>
-				</game_entity>
-			</children>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="96.211, 110.301, 0.000" rotation_euler="0.000, 0.000, -1.442"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="108.488, 106.687, 0.000" rotation_euler="0.000, 0.000, -1.442"/>
-		</game_entity>
-		<game_entity prefab="module_european_stone_floor_d">
-			<transform position="97.623, 96.213, 0.000" rotation_euler="0.000, 0.000, -1.442"/>
-		</game_entity>
-		<game_entity prefab="armor_merchant_helmet_a">
-			<transform position="81.690, 136.342, 1.039" rotation_euler="0.000, 0.000, 2.057"/>
-		</game_entity>
-		<game_entity prefab="kitchen_bowl_c">
-			<transform position="81.007, 123.232, 1.114" rotation_euler="0.000, 0.000, 0.116"/>
-		</game_entity>
-		<game_entity prefab="battania_castle_keep">
-			<transform position="147.837, 178.192, 0.000" rotation_euler="0.000, 0.000, -0.878"/>
+		<game_entity prefab="_barrier_passage_center">
+			<transform position="86.932, 111.784, 0.098" rotation_euler="0.000, 0.000, -1.698" scale="4.000, 4.000, 4.000"/>
 		</game_entity>
 		<game_entity prefab="sp_npc_villager_working_while_stand_2">
 			<transform position="59.952, 124.272, 0.718" rotation_euler="0.000, 0.000, -1.827"/>
@@ -639,7 +676,7 @@
 			<transform position="49.920, 133.858, 9.195" rotation_euler="0.000, 0.000, 1.684"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, -2.094, -3.140"/>
+					<transform rotation_euler="1.128, -2.133, -3.140"/>
 				</game_entity>
 			</children>
 		</game_entity>
@@ -647,7 +684,7 @@
 			<transform position="106.738, 140.194, 3.059" rotation_euler="0.000, 0.000, -1.534"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, -0.812, -3.140"/>
+					<transform rotation_euler="1.128, -0.851, -3.140"/>
 				</game_entity>
 			</children>
 		</game_entity>
@@ -655,7 +692,7 @@
 			<transform position="97.868, 112.255, 2.194" rotation_euler="0.000, 0.000, -0.516"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, 0.754, -3.140"/>
+					<transform rotation_euler="1.128, 0.715, -3.140"/>
 				</game_entity>
 			</children>
 		</game_entity>
@@ -663,49 +700,12 @@
 			<transform position="94.550, 157.480, 7.990" rotation_euler="0.000, 0.000, 0.551"/>
 			<children>
 				<game_entity _index_="0">
-					<transform rotation_euler="1.128, 1.502, -3.140"/>
+					<transform rotation_euler="1.128, 1.463, -3.140"/>
 				</game_entity>
 			</children>
 		</game_entity>
 		<game_entity prefab="torch_long_c">
 			<transform position="110.393, 138.578, 14.870" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_guard">
-			<transform position="109.350, 139.144, 14.869" rotation_euler="0.000, 0.000, 1.763"/>
-		</game_entity>
-		<game_entity prefab="mat_carpet_i">
-			<transform position="75.240, 127.740, 0.100" rotation_euler="0.000, 0.000, 0.035" scale="0.700, 0.700, 1.000"/>
-		</game_entity>
-		<game_entity prefab="sp_tavernkeeper">
-			<transform position="122.974, 87.926, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_tavern_wench">
-			<transform position="124.820, 89.606, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="sp_mercenary">
-			<transform position="63.696, 135.181, 0.098" rotation_euler="0.000, 0.000, -2.928" scale="0.750, 0.750, 1.000"/>
-		</game_entity>
-		<game_entity prefab="sew_or_knit_chair">
-			<tags>
-				<tag name="npc_common"/>
-				<tag name="npc_wait"/>
-				<tag name="gambler_npc"/>
-			</tags>
-			<transform position="124.784, 87.676, 0.000" rotation_euler="0.000, 0.000, 0.000"/>
-		</game_entity>
-		<game_entity prefab="_barrier_passage_center">
-			<transform position="86.932, 111.784, 0.098" rotation_euler="0.000, 0.000, -1.698" scale="4.000, 4.000, 4.000"/>
-		</game_entity>
-		<game_entity prefab="torch_wall_a_cycleoff">
-			<transform position="76.290, 129.410, 1.650" rotation_euler="0.000, 0.000, -1.459"/>
-			<children>
-				<game_entity _index_="0">
-					<transform rotation_euler="1.128, 2.586, -3.140"/>
-				</game_entity>
-			</children>
-		</game_entity>
-		<game_entity prefab="foods_basket_apple">
-			<transform position="75.834, 128.983, 0.098" rotation_euler="0.000, 0.000, -0.583"/>
 		</game_entity>
 	</entities>
 	<terrain enabled="true" node_dimension_x="3" node_dimension_y="3" node_size="100.000" lod_multiplier="1.000" min_height="-100.000" max_height="500.000" vista_normalmap="" vista_diffuse_name="" vista_diffuse_blend_type="0" vista_diffuse_blend_amount="0.000" vista_layer_detail_distance="35.000" vista_albedo_multiplier="0.670" vista_detail_albedo_name="" vista_detail_normal_name="" vista_detail_tile="20.000" vista_tileset="" colormap_detail_level="0" ao_intensity="4.000">
@@ -991,7 +991,7 @@
 			</node>
 		</nodes>
 	</terrain>
-	<editor_data editor_camera_position="78.218, 109.734, 5.252" editor_camera_elevation="-0.282" editor_camera_bearing="-14.215" editor_camera_forward="-0.655, 0.755, -0.033" author="" comment=""/>
+	<editor_data editor_camera_position="67.433, 121.901, 12.673" editor_camera_elevation="-0.925" editor_camera_bearing="3.794" editor_camera_forward="0.509, 0.798, -0.322" author="" comment=""/>
 	<camera_data near_plane="0.100" far_plane="100000.000"/>
 	<Paths/>
 </scene>
